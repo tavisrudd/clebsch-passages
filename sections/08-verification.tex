@@ -1,0 +1,23 @@
+\section{Reproducibility and data availability}
+\label{sec:verification}
+
+The square-class argument and both specialization propositions are proved
+in the text from Hitchin's incidence calculation and the displayed
+equations.  A paper-local exact-arithmetic bundle independently checks the
+golden configurations, the exchanger, and its spinor decomposition.
+
+A second paper-local bundle reconstructs the ten axes over
+\(\Q(\sqrt5)\), distinguishes the reproducing kernel from the normalized
+spherical Gram matrix, verifies the Petersen labeling, and evaluates the
+quadratic and cubic moments.  Its independent replay uses a separate dense
+polynomial representation and checks the Wigner \(3j\) conversion.  Neither
+calculation uses floating-point arithmetic.
+
+The \texttt{verification} directory distributed with the paper contains
+the exact programs, canonical certificates, checksums, toolchain
+requirements, and aggregate replay command.  It also records the exact
+claim-to-evidence correspondence.  The manifest claims no Lean coverage:
+the incidence model, square class, local fibre comparison, spinor
+specialization, face-axis geometry, and spherical moments are not formal
+dependencies.  These exact-arithmetic audits are independent checks rather
+than steps in the proofs.

@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=29mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Q}{\mathbf Q}
+\newcommand{\F}{\mathbf F}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\PSL}{\operatorname{PSL}}
+\title{Arithmetic and harmonic realizations of the Clebsch cubic}
+\author{Tavis Rudd}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We determine the rational square class of Hitchin's degree-two incidence
+cover of harmonic cubics.  Its function field is obtained by adjoining
+\(\sqrt{5J_0}\).  We define the Clebsch chart over
+\(\Q(\sqrt5)\), where \(J_0=16\sigma_3^2\), and prove that the two
+configurations over the rational cubic \(xyz\) form the complete reduced
+fibre with residue algebra \(\Q(\sqrt5)\).  The projective orthogonal
+transformation exchanging them has nonsquare spinor class after reduction
+modulo \(11\).  Independently, the degree-six
+zonal harmonics on the ten icosahedral face axes contain a
+Clebsch four-space as their Petersen eigenspace, and their normalized
+spherical cubic restricts exactly as
+\[
+ \frac1{4\pi}\int_{S^2}F_y^3
+ =-\frac{784000}{1247103}\sigma_3(y).
+\]
+The two realizations use isomorphic Clebsch modules; no rational or integral
+identification between their displayed embeddings is asserted.
+\end{abstract}
+
+\noindent\textbf{Keywords.} Clebsch configuration; Hitchin cover;
+icosahedral invariant; arithmetic double cover; spherical harmonics;
+Gaunt invariant.
+
+\smallskip
+\noindent\textbf{2020 Mathematics Subject Classification.} 14G25, 14J30,
+20C20, 51E20.
+
+\input{sections/01-introduction}
+\input{sections/02-orientation-cover}
+\input{sections/04-arithmetic-specialization}
+\input{sections/05-harmonic-realization}
+\input{sections/08-verification}
+\input{sections/09-conclusion}
+
+\section*{AI assistance disclosure}
+
+This project was developed with extensive assistance from OpenAI Codex and
+Anthropic Claude. Under the author's direction, the systems assisted
+throughout with proof exploration, literature research, symbolic and finite
+computation, code and formal-proof development, verification, and manuscript
+drafting and revision. The author checked the resulting arguments,
+computations, code, and cited sources, reviewed and edited all AI-assisted
+material, and assumes responsibility for all content.
+
+\input{sections/10-references}
+
+\end{document}

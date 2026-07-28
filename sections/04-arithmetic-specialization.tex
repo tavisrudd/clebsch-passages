@@ -1,0 +1,127 @@
+\section{Arithmetic specialization}
+\label{sec:arithmetic}
+
+The arithmetic exchange is already visible on the cubic \(xyz\).  Its two
+icosahedral six-axis configurations are Galois conjugate over
+\(\Q(\sqrt5)\).  The exchanger is the projective orthogonal transformation
+carrying one configuration to the other.  Over a finite field where the
+configurations become rational, it has spinor class \([2]\); modulo \(11\)
+this class is nontrivial.
+
+\subsection{The golden fibre}
+
+Retain the field \(E\), parameter \(t\), and six-set \(I_t\) from
+Section~\ref{sec:cover}.
+These six projective points are its axes through opposite vertices.  Thus
+an icosahedral configuration here means the unordered six-set \(I_t\).
+A point of the incidence cover records one chosen six-set; its two points
+over \(xyz\) correspond to the two conjugate configurations.
+
+\begin{proposition}[Golden fibre]\label{prop:golden-fibre}
+Over a field of characteristic different from \(2\) and \(5\), the points
+of \(I_t\) lie on \(xyz=0\), have a common nonzero norm, have normalized
+squared inner product \(1/5\), and form a six-arc.  The two configurations
+are conjugate geometric configurations defined over
+\[
+ \Q[t]/(t^2-t-1)=\Q(\sqrt5)
+\]
+and are exchanged by its nontrivial automorphism.  In Hitchin's incidence
+cover, whose point records the chosen six-set, they are the complete fibre
+over \([xyz]\).
+\end{proposition}
+
+\begin{proof}
+Every displayed vector has one zero coordinate.  Since \(t^2=t+1\), its
+squared norm is \(t^2+1=t+2\).  The inner product of two distinct
+representatives is \(\pm t\), while
+\[
+ (t+2)^2=5(t+1)=5t^2.
+\]
+This gives the normalized squared inner product \(1/5\).  The twenty
+three-point determinants are
+\(\pm2t\) or \(\pm2t^2\), so none vanishes under the stated hypotheses.
+The final assertion uses Hitchin's classification of the two
+icosahedral sets on the orthogonal-plane cubic.
+\end{proof}
+
+\subsection{The exchanger}
+
+Set
+\[
+ R=
+ \begin{pmatrix}
+ 1&0&0\\
+ 0&0&-1\\
+ 0&1&0
+ \end{pmatrix}.
+\]
+The relation \(1-t=-1/t\) gives, by substitution,
+\[
+ R(I_t)=I_{1-t},\qquad
+ R^2=\operatorname{diag}(1,-1,-1),\qquad R^4=1.
+\]
+Moreover \(R(xyz)=-xyz\): it fixes the projective cubic and exchanges its
+two configurations.
+
+\subsection{Finite-field specialization}
+
+Let \(k\) be a finite field of odd characteristic other than \(5\), and
+suppose that \(5\) is a square in \(k\).  Then \(t^2-t-1\) has two distinct
+roots in \(k\), so the displayed equations give two rational
+configurations exchanged by \(R\).
+
+\begin{proposition}[Spinor specialization]\label{prop:spinor-specialization}
+The spinor class of \(R\) is \([2]\in k^\times/k^{\times2}\).  Under the
+standard identifications
+\[
+ \operatorname{SO}_3(k)/\Omega_3(k)
+ \cong \operatorname{PGL}_2(k)/\operatorname{PSL}_2(k),
+\]
+the exchanger lies outside \(\operatorname{PSL}_2(k)\) exactly when \(2\)
+is nonsquare.  In particular, over \(\F_{11}\) it represents the
+nontrivial element of
+\[
+ T_{11}=\operatorname{PGL}_2(11)/\PSL_2(11).
+\]
+\end{proposition}
+
+\begin{proof}
+For \(Q(x,y,z)=x^2+y^2+z^2\), reflection in a vector \(v\) has spinor
+class \(Q(v)\).  On the \(yz\)-plane,
+\[
+ R=s_{e_2}s_{e_2-e_3},
+\]
+so
+\[
+ \theta(R)=Q(e_2)Q(e_2-e_3)=2
+ \quad\text{in }k^\times/k^{\times2}.
+\]
+The standard
+identifications
+\[
+ \operatorname{SO}_3(k)\cong\operatorname{PGL}_2(k),
+ \qquad
+ \Omega_3(k)\cong\operatorname{PSL}_2(k)
+\]
+identify the spinor quotient with the projective quotient.  Finally, the
+roots modulo \(11\) are \(4\) and \(8\), and \(2\) is nonsquare modulo
+\(11\), proving the specialization.
+\end{proof}
+
+Thus two independent square classes govern the finite specialization:
+\([5]\) determines whether the two displayed configurations are rational, while
+\([2]\) determines whether their exchanger lies in the special projective
+subgroup.  Dye's existence criterion for Clebsch hexagons has the same
+\([5]\) boundary \cite[Theorem~1]{DyeClebsch}.
+
+\paragraph{Integral boundary.}
+Over a finite field of characteristic different from \(2\) and \(5\), the
+abstract quadratic cover gives
+\[
+ \#X_f(\F_q)=1+\chi_q(5J(f)).
+\]
+Its geometric interpretation over finite fields is proved only away
+from an unspecified finite set of primes.  This global comparison is
+separate from the good reduction at \(11\) of the explicit golden fibre and
+matrix \(R\); we do not replace the finite exceptional set by
+\(p\ne2,5\).

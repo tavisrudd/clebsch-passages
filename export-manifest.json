@@ -1,0 +1,318 @@
+{
+  "excluded_path_count": 0,
+  "excluded_release_outputs": [
+    "clebsch_passages.pdf"
+  ],
+  "excluded_symlinks": [],
+  "exporter_blob": "d38f45b035738e161b53233b597538b885c4d039",
+  "files": [
+    {
+      "bytes": 130,
+      "mode": "100644",
+      "path": ".gitignore",
+      "role": "export-support",
+      "sha256": "9c5931f5e2fef075c5305236fbe12583bd56358b592d9baa3c04afe8cd21557a",
+      "source_blob": null
+    },
+    {
+      "bytes": 1179,
+      "mode": "100644",
+      "path": ".zenodo.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "341bf59c655499a64b3526c8407906ea04c6c3db21b2f38a7ce6c90fe5c7bf36",
+      "source_blob": null
+    },
+    {
+      "bytes": 1328,
+      "mode": "100644",
+      "path": "ARTIFACT.md",
+      "rewrites": [],
+      "role": "support",
+      "sha256": "6b00030ee13c11479c8e3133413f4bf142f85031d4353f07b9208f4ee47fd584",
+      "source_blob": "8a72570b52caae588b0243d85ba9671827743c26"
+    },
+    {
+      "bytes": 476,
+      "mode": "100644",
+      "path": "FORMAL_COMPANION.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "ce36147adc16754fde586302d2df15e950e09d9474ae141f6a5ec36931e12fb3",
+      "source_blob": null
+    },
+    {
+      "bytes": 335,
+      "mode": "100644",
+      "path": "Makefile",
+      "rewrites": [],
+      "role": "support",
+      "sha256": "7bd4593ce0e3ed2998b67eeb1e0d57b6e381844587297e86dfd43cee1b22e14a",
+      "source_blob": "36b246732e707e4731568223cafed98416eefbf9"
+    },
+    {
+      "bytes": 297,
+      "mode": "100644",
+      "path": "PROVENANCE.md",
+      "role": "provenance",
+      "sha256": "518d74d63c64c8c483f2fe8f00708a735484a51e0cff3af2c68c986c459b95bb",
+      "source_blob": null
+    },
+    {
+      "bytes": 2065,
+      "mode": "100644",
+      "path": "README.md",
+      "rewrites": [],
+      "role": "support",
+      "sha256": "2c0a6d2482330343e767c24fa7439929d4f1fc8f9122543bdbf378bd91ef0aa0",
+      "source_blob": null
+    },
+    {
+      "bytes": 2614,
+      "mode": "100644",
+      "path": "clebsch_passages.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "dd38b3c8c7f12099c6db3e0f2204e3fd0eb5437d0627fcab44e9b1a5be16f4bf",
+      "source_blob": "b0339a436ac465be9c1e9e002212653527748c00"
+    },
+    {
+      "bytes": 1580,
+      "mode": "100644",
+      "path": "flake.lock",
+      "rewrites": [],
+      "role": "support",
+      "sha256": "c272c8b7909aeb3929144b029778bcfd52f13648a5dbb96675a1be09be9936fa",
+      "source_blob": null
+    },
+    {
+      "bytes": 1289,
+      "mode": "100644",
+      "path": "flake.nix",
+      "rewrites": [],
+      "role": "support",
+      "sha256": "07a6899ccf9e7875d413e8de6a0b23a07d18302158861050b673f77fdfaf7a52",
+      "source_blob": null
+    },
+    {
+      "bytes": 1247,
+      "mode": "100644",
+      "path": "release_files.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "cb3751967f7432c1ea2657d0723e9dc2b0148438a05d617f226630d7d54fef5e",
+      "source_blob": null
+    },
+    {
+      "bytes": 5159,
+      "mode": "100644",
+      "path": "sections/01-introduction.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "8930da0f48142f1d3ec9146ef274d3a325680782f44b48ceb7cfab3c78d08a8b",
+      "source_blob": "5a8afc68f02d5353f1477b8493675865898b2ae5"
+    },
+    {
+      "bytes": 10411,
+      "mode": "100644",
+      "path": "sections/02-orientation-cover.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "9cdf9341e605d047f3c98c11064cb53867d5c21844f768b7d99610e6f84fb172",
+      "source_blob": "39610ee0e14908d11b1c4c815efc90ff063b3f59"
+    },
+    {
+      "bytes": 4382,
+      "mode": "100644",
+      "path": "sections/04-arithmetic-specialization.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "6fe0b87257239de230393862cf2ec91adb4cd859eb74a8cb3ee4ba384c75d177",
+      "source_blob": "6c58fb9edf00c90a7b1c7b6e90597b7f84214235"
+    },
+    {
+      "bytes": 4883,
+      "mode": "100644",
+      "path": "sections/05-harmonic-realization.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "f6c7fea92a5f3a26d7deeb88234036902547caaa6653527151adfa105264ac1f",
+      "source_blob": "3f5b3adffe56a973ea25d6609e5ee7560d0a58d4"
+    },
+    {
+      "bytes": 1281,
+      "mode": "100644",
+      "path": "sections/08-verification.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "8b0f511a006d74c0cfac4d51763c39bcbba6c2202ba18923ca5f1e2c1411b52b",
+      "source_blob": "4f43add9c905a5f9bce6d114e3a7191766ebda68"
+    },
+    {
+      "bytes": 1347,
+      "mode": "100644",
+      "path": "sections/09-conclusion.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "0609d028066f9dda772f162475b9f4f6958c43e15a1a765457296a9213d32782",
+      "source_blob": "b06be08f760caa694c9c73c0b97ecb3f75dc8588"
+    },
+    {
+      "bytes": 1831,
+      "mode": "100644",
+      "path": "sections/10-references.tex",
+      "rewrites": [],
+      "role": "manuscript-source",
+      "sha256": "3b2b4c3d9cab7b2e461a3d1e89bb449f1608075cb5b3ce694e6816fd8cdc9a13",
+      "source_blob": "5b93ca3e2fab507c7912f337ef70807b9579f4df"
+    },
+    {
+      "bytes": 2651,
+      "mode": "100644",
+      "path": "verification/README.md",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "c5d0d30a161046936d0c3303593dcb323ee93f74189f2ea8097f5f4df6d2fd8a",
+      "source_blob": null
+    },
+    {
+      "bytes": 1151,
+      "mode": "100644",
+      "path": "verification/evidence/arithmetic_cover.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "c0e338960cd0a12a7eab85a7f000847349327564142178af97a03a54aef23c41",
+      "source_blob": "b313ba3030f3c507ec95debdff84041f14e99a9c"
+    },
+    {
+      "bytes": 6872,
+      "mode": "100644",
+      "path": "verification/evidence/arithmetic_cover.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "b3e3496f3b78de1881adcf71a90c0ab3d7c518867b66da15a6d5505185388bf4",
+      "source_blob": "b7df4572cd8ef74dcead931e7395db36f8e5c40c"
+    },
+    {
+      "bytes": 333,
+      "mode": "100644",
+      "path": "verification/evidence/arithmetic_cover.sha256",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "b3fcd4444d3b5ec53a6611bacf384c66290bd0705f40a44440fa99de3bf1152c",
+      "source_blob": "c45a78421918882518f7b3a15461df117e450644"
+    },
+    {
+      "bytes": 2723,
+      "mode": "100644",
+      "path": "verification/evidence/arithmetic_cover_replay.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "22f55a9c4b781bb028e64f4544c7dfa7145bb325cc49c0ee43fb256c2dc330a6",
+      "source_blob": "07264f3a124bc186567e0d0152df0d33a629e0fc"
+    },
+    {
+      "bytes": 13406,
+      "mode": "100644",
+      "path": "verification/evidence/harmonic_clebsch.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "ecdff5d58327b07e0a26f4bfdf83fd403c47bf5b34cdf856bfc3c9d053b9fa17",
+      "source_blob": "1eb57609ce9a276271764a331834e081c1b7f349"
+    },
+    {
+      "bytes": 8513,
+      "mode": "100644",
+      "path": "verification/evidence/harmonic_clebsch.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "74ea129554084f6b04e4b90c022616e136377c19a09bb829bb4c2281521432fd",
+      "source_blob": "dd23802d1885c6826630cd1862c0c2456313402d"
+    },
+    {
+      "bytes": 333,
+      "mode": "100644",
+      "path": "verification/evidence/harmonic_clebsch.sha256",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "84c155e0abd2ff8c2593a79de4b33b565a1d36e333653331d7bee05f687224cc",
+      "source_blob": "be02805837d2a0ddfdd0afcba6d50d2f60baae0c"
+    },
+    {
+      "bytes": 8392,
+      "mode": "100644",
+      "path": "verification/evidence/harmonic_clebsch_replay.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "5bdf738a9116b4046624301348ffa9e873f1634bf0844f2370a734d7d2da54cd",
+      "source_blob": "fb1d4a4ff477a3aafcac534d3363e7a55d2a4430"
+    },
+    {
+      "bytes": 5050,
+      "mode": "100644",
+      "path": "verification/extract_statement_identity.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "0f5c9c6841a60a1c6af7db502d09875c24f35bfc7d0e0452a3861f192d0b6ad2",
+      "source_blob": "79c7f4c4bf152e81beb0c5a80a8f039e8555978c"
+    },
+    {
+      "bytes": 9390,
+      "mode": "100644",
+      "path": "verification/statement_identity.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "60e019ba5781d36a69cf30293a4df97dc7c23216f0a6448f13c4c468c0ab4498",
+      "source_blob": null
+    },
+    {
+      "bytes": 4860,
+      "mode": "100644",
+      "path": "verification/trust_manifest.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "aa31644cbf3db492854712d181ca669a2a3ab9f3a41fab02c07e096e88361394",
+      "source_blob": "16f549a49f1f927bb97b66bf23f60c662ad0c3b0"
+    },
+    {
+      "bytes": 3569,
+      "mode": "100644",
+      "path": "verification/verify_formal_companion.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "8c17e3d8d7c534f0d9095b0edbc33455bb4ca4f3e3bf2090633747b3d6b8a46c",
+      "source_blob": null
+    },
+    {
+      "bytes": 5117,
+      "mode": "100644",
+      "path": "verification/verify_release.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "5a1af74db289e7827565c3e0627ee5c8f86a57980f3da1d4ce9cfed6a5fc55dc",
+      "source_blob": null
+    },
+    {
+      "bytes": 4994,
+      "mode": "100644",
+      "path": "verification/verify_scaffold.py",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "0aad1acc0605d5ec1cb56a588146b1f5eb392d9d95fa6d7faa8904d4223d9c27",
+      "source_blob": "60d88a8b7881e59fea8ce136e77221f81c57c25e"
+    }
+  ],
+  "github": "tavisrudd/clebsch-passages",
+  "main_sources": [
+    "clebsch_passages.tex"
+  ],
+  "manifest_self_excluded": true,
+  "paper_ids": [
+    "clebsch_passages"
+  ],
+  "paper_registry_sha256": "e3d7a09841ddaa925ef9196f1d36df4be5efa06c2fb51d1e557cd6cdde971f22",
+  "repository": "clebsch-passages",
+  "repository_map_sha256": "c6ce20755b904d93ebf33e840efa9c6d3eef33b2a5777679a3c1e5e2629c0c7f",
+  "schema_version": 1,
+  "source_commit": "4493afe499109531bf5dcb489f79a2edc1ae8ed5"
+}

@@ -1,0 +1,160 @@
+#!/usr/bin/env python3
+"""Run the paper-local aggregate verification gate."""
+
+from __future__ import annotations
+
+import subprocess
+import json
+import re
+from pathlib import Path
+
+
+PAPER = Path(__file__).resolve().parents[1]
+
+def run(name: str, command: list[str], cwd: Path = PAPER) -> None:
+    completed = subprocess.run(
+        command,
+        cwd=cwd,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        check=False,
+    )
+    if completed.returncode:
+        tail = "\n".join(completed.stdout.splitlines()[-12:])
+        raise SystemExit(f"clebsch-passages release: FAIL [{name}]\n{tail}")
+    print(f"clebsch-passages release: PASS [{name}]")
+
+
+def check_latex_log() -> None:
+    log = (PAPER / "clebsch_passages.log").read_text(
+        encoding="utf-8", errors="replace"
+    )
+    forbidden = (
+        "LaTeX Warning:",
+        "Package rerunfilecheck Warning:",
+        "Overfull \\hbox",
+        "Underfull \\hbox",
+        "undefined references",
+        "undefined citations",
+    )
+    found = [marker for marker in forbidden if marker in log]
+    if found:
+        raise SystemExit(f"clebsch-passages release: FAIL [LaTeX warnings] {found}")
+    if "Output written on clebsch_passages.xdv" not in log:
+        raise SystemExit("clebsch-passages release: FAIL [LaTeX output missing]")
+    print("clebsch-passages release: PASS [warning-free manuscript build]")
+
+
+def check_release_files() -> None:
+    allowlist_path = PAPER / "release_files.json"
+    allowlist = json.loads(allowlist_path.read_text(encoding="utf-8"))
+    files = allowlist.get("files", [])
+    if not files or len(files) != len(set(files)):
+        raise SystemExit("clebsch-passages release: FAIL [invalid release allowlist]")
+    forbidden_parts = {"notes", "lean", "WORKPLAN.md"}
+    for relative in files:
+        path = Path(relative)
+        if path.is_absolute() or ".." in path.parts:
+            raise SystemExit(
+                f"clebsch-passages release: FAIL [unsafe allowlist path {relative}]"
+            )
+        if forbidden_parts.intersection(path.parts):
+            raise SystemExit(
+                f"clebsch-passages release: FAIL [forbidden allowlist path {relative}]"
+            )
+        if not (PAPER / path).is_file():
+            raise SystemExit(
+                f"clebsch-passages release: FAIL [missing allowlist file {relative}]"
+            )
+    print(f"clebsch-passages release: PASS [release allowlist: {len(files)} files]")
+
+
+def check_public_vocabulary() -> None:
+    patterns = {
+        "numbered workflow identifier": re.compile(r"\bC" + r"[0-9]{3,}\b"),
+        "superseded paper name": re.compile("Paper" + r"\s+III", re.IGNORECASE),
+        "parent-notes reference": re.compile(r"\.\./" + "notes" + "/"),
+        "repository-notes reference": re.compile(
+            r"(^|[^A-Za-z])" + "notes" + "/", re.MULTILINE
+        ),
+    }
+    allowlist = json.loads(
+        (PAPER / "release_files.json").read_text(encoding="utf-8")
+    )["files"]
+    text_suffixes = {
+        ".lock",
+        ".md",
+        ".tex",
+        ".json",
+        ".nix",
+        ".py",
+        ".sha256",
+    }
+    for relative in allowlist:
+        path = PAPER / relative
+        if path.suffix not in text_suffixes and path.name != "Makefile":
+            continue
+        source = path.read_text(encoding="utf-8")
+        for name, pattern in patterns.items():
+            if pattern.search(source):
+                raise SystemExit(
+                    f"clebsch-passages release: FAIL [{name} in {relative}]"
+                )
+    print("clebsch-passages release: PASS [public vocabulary]")
+
+
+def main() -> int:
+    check_release_files()
+    check_public_vocabulary()
+    run(
+        "statement identity",
+        ["python3", "verification/extract_statement_identity.py", "--check"],
+        PAPER,
+    )
+    run(
+        "trust manifest",
+        ["python3", "verification/verify_scaffold.py"],
+        PAPER,
+    )
+    run(
+        "formal companion pin",
+        ["python3", "verification/verify_formal_companion.py"],
+        PAPER,
+    )
+
+    for stem, label in (
+        ("arithmetic_cover", "arithmetic cover"),
+        ("harmonic_clebsch", "harmonic bridge"),
+    ):
+        evidence = PAPER / "verification" / "evidence"
+        run(
+            f"{label} hashes",
+            [
+                "sha256sum",
+                "-c",
+                f"verification/evidence/{stem}.sha256",
+            ],
+            PAPER,
+        )
+        run(
+            f"{label} primary",
+            ["python3", f"verification/evidence/{stem}.py", "--check"],
+            PAPER,
+        )
+        run(
+            f"{label} independent replay",
+            ["python3", f"verification/evidence/{stem}_replay.py"],
+            PAPER,
+        )
+        if not evidence.is_dir():
+            raise SystemExit("clebsch-passages release: FAIL [missing evidence directory]")
+
+    run("manuscript build", ["make", "-B"], PAPER)
+    check_latex_log()
+    print("clebsch-passages release: ALL CHECKS PASS")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
