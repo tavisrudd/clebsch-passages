@@ -49,7 +49,9 @@ kernel-checked proofs of two neighboring symbolic mechanisms:
   graph's four-dimensional minus-two eigenspace.
 
 The exact source revision and gate are recorded in `FORMAL_COMPANION.json`
-and locked by `flake.lock`. These results are not premises of the manuscript's
-four claim groups. In particular, they do not formalize the `5J₀` square
-class, golden fibre, spinor specialization, face-axis geometry, spherical
-moments, or Gaunt coefficient.
+and locked by `flake.lock`. The version-independent archival locator is the
+Zenodo concept DOI
+[`10.5281/zenodo.21650878`](https://doi.org/10.5281/zenodo.21650878). These
+results are not premises of the manuscript's four claim groups. In
+particular, they do not formalize the `5J₀` square class, golden fibre, spinor
+specialization, face-axis geometry, spherical moments, or Gaunt coefficient.
