@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/1316332661.svg)](https://doi.org/10.5281/zenodo.21682515)
 
+**Series:** *The Clebsch cubic: recovering, orienting, and realizing --- III*
+
 This directory contains the `clebsch-passages` manuscript and artifact.  Its
 main theorem has two legs:
 
