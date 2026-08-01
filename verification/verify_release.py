@@ -82,15 +82,7 @@ def check_public_vocabulary() -> None:
     allowlist = json.loads(
         (PAPER / "release_files.json").read_text(encoding="utf-8")
     )["files"]
-    text_suffixes = {
-        ".lock",
-        ".md",
-        ".tex",
-        ".json",
-        ".nix",
-        ".py",
-        ".sha256",
-    }
+    text_suffixes = {".md", ".tex", ".json", ".py", ".sha256"}
     for relative in allowlist:
         path = PAPER / relative
         if path.suffix not in text_suffixes and path.name != "Makefile":
@@ -117,14 +109,10 @@ def main() -> int:
         ["python3", "verification/verify_scaffold.py"],
         PAPER,
     )
-    run(
-        "formal companion pin",
-        ["python3", "verification/verify_formal_companion.py"],
-        PAPER,
-    )
 
     for stem, label in (
         ("arithmetic_cover", "arithmetic cover"),
+        ("orientation_source", "orientation source"),
         ("harmonic_clebsch", "harmonic bridge"),
     ):
         evidence = PAPER / "verification" / "evidence"

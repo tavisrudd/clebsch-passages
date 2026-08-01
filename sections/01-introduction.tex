@@ -44,6 +44,11 @@ The function field of Hitchin's incidence cover is
 \[
  \Q(\mathbf P(H))\bigl(\sqrt{5J_0}\bigr).
 \]
+If \(\mathcal N\to\mathbf P(H)\) is its finite Stein normalization, then,
+after normalizing the anti-invariant summand, its algebra is
+\[
+ \mathcal O\oplus\mathcal O(-3),\qquad z^2=5J_0.
+\]
 For the Clebsch chart
 \(\iota_t:\mathbf P(V_{\Q(\sqrt5)})\to\mathbf P(H_{\Q(\sqrt5)})\)
 defined in Section~\ref{sec:cover},
@@ -60,6 +65,78 @@ The factor \(5\) has a concrete descent meaning: the cubic \([xyz]\) and
 its unordered geometric fibre are rational, but choosing either
 icosahedral configuration---equivalently, either conjugate Clebsch chart
 through that point---requires \(\Q(\sqrt5)\).
+
+The choice can be retained globally after normalizing the pullback to the
+Clebsch chart, but its comparison with the conference and harmonic signs is
+relative to a marking.  A \emph{marked bridge datum} \(\mathfrak m\) consists
+of an ordering of the six golden projective axes, the five plane triples
+labelled so that \(q_1=xyz\) and \(\sum q_i=0\), and the resulting normalized
+linear lift
+\[
+ \iota_t(y)=\sum_i y_iq_i.
+\]
+The datum also identifies the ten face axes with the two-subsets of those
+five labels.  Choose normalized representatives of the six projective axes.
+They give a conference matrix
+\(C_{\mathfrak m}\).  A different choice switches it by a diagonal sign
+matrix.  The resulting switching-invariant triangle cubic is
+\[
+ Z_{\mathfrak m}(x)=\sum_{i<j<k}(C_{\mathfrak m})_{ij}
+ (C_{\mathfrak m})_{jk}(C_{\mathfrak m})_{ki}x_ix_jx_k.
+\]
+It is translation-invariant and hence defines
+\[
+ Z_{\mathfrak m}\in\operatorname{Sym}^3
+ \bigl((\Q^6/\Q\mathbf1)^*\bigr).
+\]
+Write \([C_{\mathfrak m},Z_{\mathfrak m}]_{\rm or}\) for this marked
+source.  Changing the auxiliary representatives by \(a_i\mapsto d_i a_i\)
+sends \(C_{\mathfrak m}\) to \(DC_{\mathfrak m}D\) and fixes
+\(Z_{\mathfrak m}\).  The opposite source is represented by
+\((-C_{\mathfrak m},-Z_{\mathfrak m})\).  The sign of the cubic generator
+is retained, so the brackets are not projective notation.  Relabelling is
+equivariant only when all labelled objects are transported together; it is
+not quotiented silently.
+
+\begin{theorem}[Relative marked orientation bridge]
+\label{thm:orientation-source}
+Fix a marked bridge datum \(\mathfrak m\).  Let
+\(B=\mathbf P(V_E)\), where \(E=\Q(\sqrt5)\), and pull Hitchin's
+incidence normalization back along \(\iota_t:B\to\mathbf P(H_E)\).
+The normalization of this pullback is a disjoint union
+\[
+ B_+\amalg B_-.
+\]
+The fixed isotropic plane selects \(B_+\), and incidence deck exchange
+interchanges the components.  For an odd generator normalized on \(B_+\),
+their equations are
+\[
+ z=4\sqrt5\,\sigma_3,
+ \qquad z=-4\sqrt5\,\sigma_3.
+\]
+On \(D(\sigma_3)\) they are the two distinct icosahedral configurations;
+on the Clebsch cubic the unnormalized branches meet, while the normalization
+remains disjoint.
+
+Relative to \(\mathfrak m\), equip \(B_+\) with the source
+\([C_{\mathfrak m},Z_{\mathfrak m}]_{\rm or}\) and equip \(B_-\) with its
+deck-opposite.  At \([xyz]\), the golden
+exchanger identifies this opposite with the conjugate configuration and
+the representative
+\((-C_{\mathfrak m},-Z_{\mathfrak m})\).  Under the marked primitive
+pair-sum map
+\[
+ \beta:V\longrightarrow\Q^{\binom52},
+ \qquad \beta(y)_{ij}=y_i+y_j,
+\]
+the same relative convention fixes the sign of the degree-six cubic in
+Theorem~\ref{thm:harmonic-main}.  The normalized component alone is not
+asserted to determine \(\mathfrak m\).
+\end{theorem}
+
+Here \(Z_{\mathfrak m}\) and \(\sigma_3\) are different cubics on spaces of
+dimensions five and four.  The theorem compares their orientations relative
+to \(\mathfrak m\); it does not identify their polynomial domains.
 
 \begin{theorem}[Degree-six harmonic restriction]
 \label{thm:harmonic-main}
@@ -90,6 +167,9 @@ orthogonal transformation between the two configurations yields spinor
 class \([2]\).  Independently, the harmonic proof identifies the pair-sum
 coefficients with the Petersen \((-2)\)-eigenspace and determines the
 invariant cubic from one exact spherical-moment calculation.
+Between these arguments, Theorem~\ref{thm:orientation-source} normalizes the
+chart pullback and, relative to the stated marking and lift, follows its deck
+involution through the golden conference matrix and Petersen pair-sum map.
 
 Hitchin proves the generic degree, identifies the branch sextic, constructs
 the Clebsch chart, computes its restriction, and classifies the fibre over
@@ -106,12 +186,22 @@ equation \(z^2=5J_{\mathbf Z}\) is etale on \(D(10J_{\mathbf Z})\), but its
 comparison with the geometric incidence variety is proved only after
 inverting an unspecified integer.
 
-The harmonic theorem is logically independent of the incidence cover.  It
+The numerical harmonic restriction is logically independent of the
+incidence cover.  The relative orientation theorem compares their signs only
+after choosing a sheet and the complete marked bridge datum.  It
 places the classical degree-six bond-order observable---the rotationally
 invariant cubic formed from degree-six harmonic coefficients---
 \cite{SNR1981,SNR1983} on the same four-space and computes its exact
-restriction.  The coefficient
-\(-784000/1247103\) has denominator divisible by \(11\), and this paper
+restriction.  The coefficient factors as
+\[
+ -\frac{784000}{1247103}
+ =-\frac{400}{46189}\frac{1960}{27}.
+\]
+The first factor is the universal \((6,6,6)\) Gaunt coupling
+\(\bigl(\begin{smallmatrix}6&6&6\\0&0&0\end{smallmatrix}\bigr)^2\);
+the second is the restriction scalar of the marked Petersen embedding.
+Thus the prime \(11\) in the denominator belongs to the universal angular
+momentum normalization, not to the golden descent.  This paper
 relates the two constructions through their four-dimensional
 \(A_5\)-module and invariant polynomial \(\sigma_3\), rather than by a
 rational map between their ambient harmonic spaces.

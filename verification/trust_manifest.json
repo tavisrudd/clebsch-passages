@@ -1,5 +1,5 @@
 {
-  "schema": "clebsch-passages-trust-v2",
+  "schema": "clebsch-passages-trust-v3",
   "local_release_ready": true,
   "submission_ready": false,
   "submission_blockers": [
@@ -8,7 +8,7 @@
   ],
   "formal_coverage": {
     "status": "none claimed",
-    "boundary": "No Lean result is a dependency of any statement in this manifest."
+    "boundary": "No Lean result is a dependency of any statement in this manifest; the supplemental conference and triangle formalization does not represent the global incidence normalization."
   },
   "claims": [
     {
@@ -17,17 +17,17 @@
         "thm:arithmetic-main"
       ],
       "clauses": [
-        "rational incidence model and quadratic function field",
+        "rational incidence model, quadratic function field, and global Stein double-cover algebra",
         "branch square class 5J0",
         "conjugate Clebsch charts, their completed conductor model and canonical map to the incidence normalization, and the identity iota_t^*J0=16 sigma3^2"
       ],
-      "statement": "Hitchin's rational icosahedral incidence extension has function field Q(P(H))(sqrt(5J0)); each conjugate Clebsch chart is defined over Q(sqrt(5)), not Q, the charts meet only at xyz and descend to a Q-scheme whose completed conductor and normalization recover Q(sqrt(5)), their fixed-parent sections map canonically to the incidence normalization, and each chart pulls J0 back to 16 sigma3^2.",
+      "statement": "Hitchin's rational icosahedral incidence extension has function field Q(P(H))(sqrt(5J0)), and its Stein algebra is O plus O(-3) with anti-invariant multiplication z^2=5J0 after normalization of the generator; each conjugate Clebsch chart is defined over Q(sqrt(5)), not Q, the charts meet only at xyz and descend to a Q-scheme whose completed conductor and normalization recover Q(sqrt(5)), their fixed-parent sections map canonically to the incidence normalization, and each chart pulls J0 back to 16 sigma3^2.",
       "status": "proven",
       "modes": [
         "conceptual",
         "classical-input"
       ],
-      "proof_role": "human proof using Hitchin's incidence degree, branch divisor, Clebsch chart, and invariant calculation",
+      "proof_role": "human proof using Hitchin's incidence degree, branch divisor, Clebsch chart, invariant calculation, and the trace-split rank-one reflexive Stein algebra on projective space",
       "evidence": [
         "sections/01-introduction.tex",
         "sections/02-orientation-cover.tex"
@@ -53,7 +53,7 @@
         "certificate",
         "independent-replay"
       ],
-      "proof_role": "local normalization proof plus exact audit of displayed coordinates",
+      "proof_role": "quadratic pinching and signed Gram-determinant proof, with the displayed coordinates retained as an independent regression audit",
       "evidence": [
         "sections/02-orientation-cover.tex",
         "sections/04-arithmetic-specialization.tex",
@@ -61,6 +61,36 @@
         "verification/evidence/arithmetic_cover_replay.py",
         "verification/evidence/arithmetic_cover.json",
         "verification/evidence/arithmetic_cover.sha256"
+      ]
+    },
+    {
+      "id": "ORIENT-1",
+      "theorem_labels": [
+        "thm:orientation-source"
+      ],
+      "clauses": [
+        "normalization of the pulled-back incidence cover into two chart components",
+        "maximal distinct-configuration locus D(sigma3)",
+        "relative marked source convention and its golden-fibre identification with conference and triangle-cubic reversal",
+        "label-compatible primitive Petersen comparison and relative harmonic sign transport",
+        "unspecified geometric integral localization"
+      ],
+      "statement": "The normalized pullback of Hitchin's incidence cover to the golden Clebsch chart is the disjoint union of two normal chart components, while the unnormalized branches are distinct exactly on D(sigma3). After an ordered golden realization, normalized chart lift, and compatible plane-triple and Petersen labels are supplied, the selected component is assigned [C_m,Z_m]_or and the other its deck-opposite; the golden exchanger identifies the opposite with (-C_m,-Z_m) at xyz, and the marked primitive pair-sum map transports this relative sign to the degree-six Gaunt cubic. The incidence sheet alone is not asserted to determine the marking or lift.",
+      "status": "certified",
+      "modes": [
+        "conceptual",
+        "classical-input",
+        "certificate",
+        "independent-replay"
+      ],
+      "proof_role": "split-quadratic pinching, tight-frame conference identities, and an explicit relative-marking proof using Hitchin's branch and chart theorems, with a golden-fibre equivariance witness and exact regression audit",
+      "evidence": [
+        "sections/03-orientation-source.tex",
+        "verification/evidence/orientation_source.py",
+        "verification/evidence/orientation_source_replay.py",
+        "verification/evidence/orientation_source.json",
+        "verification/evidence/orientation_source.sha256",
+        "verification/evidence/harmonic_clebsch.json"
       ]
     },
     {
@@ -81,7 +111,7 @@
         "certificate",
         "independent-replay"
       ],
-      "proof_role": "human representation-theoretic proof with exact matrix audit",
+      "proof_role": "two-orbit Petersen kernel calculation, representation-theoretic eigenspace proof, and exact regression audit",
       "evidence": [
         "sections/05-harmonic-realization.tex",
         "verification/evidence/harmonic_clebsch.py",
@@ -106,7 +136,7 @@
         "certificate",
         "independent-replay"
       ],
-      "proof_role": "Gaunt identity and invariant-line argument with two exact evaluations",
+      "proof_role": "invariant-cubic-line argument normalized on the marked primitive point-stabilizer-fixed vector, with the universal Wigner factor separated from the marked Petersen restriction scalar",
       "evidence": [
         "sections/05-harmonic-realization.tex",
         "verification/evidence/harmonic_clebsch.py",

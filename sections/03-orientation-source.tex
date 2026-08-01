@@ -1,0 +1,179 @@
+\section{The relative marked orientation bridge}
+\label{sec:orientation-source}
+
+This section keeps track of the sign lost by projectivizing the Clebsch
+chart.  The normalization is intrinsic to the pullback.  Its comparison with
+the golden six-axis data and the Petersen coefficient module is relative to
+the marked bridge datum \(\mathfrak m\) fixed in the introduction.
+
+\subsection{Normalization over the Clebsch chart}
+
+Let \(\mathcal N\to\mathbf P(H)\) be the incidence normalization from
+Section~\ref{sec:cover}, and put \(B=\mathbf P(V_E)\).  Choose the
+anti-invariant generator in Theorem~\ref{thm:arithmetic-main}; its pullback
+is the odd generator \(z\) below.  On the chart, the Stein-algebra theorem
+and Hitchin's restriction identity give the equality of finite
+\(\mathcal O_B\)-algebras
+\[
+ z^2=5\iota_t^*J_0=80\sigma_3^2
+   =(z-4\sqrt5\,\sigma_3)(z+4\sqrt5\,\sigma_3).
+\]
+For a normal domain \(S\), with \(2\) invertible and \(0\ne a\in S\), the algebra
+\(S[z]/(z^2-a^2)\) maps to \(S\times S\) by \(z\mapsto(a,-a)\).  Its image
+consists of pairs congruent modulo \(a\); hence its normalization is
+\(S\times S\), its conductor is \((a)\times(a)\), and it is already split
+etale where \(a\) is a unit.  Applying this elementary pinching lemma with
+\(a=4\sqrt5\,\sigma_3\) gives the normalization
+\(B_+\amalg B_-\) and locates the entire failure of normality on the
+Clebsch cubic.  The constant plane \(U_t\) supplies one component; deck
+exchange supplies the other.  Hitchin's chart classification identifies
+\(D(\sigma_3)\) as exactly the locus of two distinct regular configurations.
+The magnitude \(4\sqrt5\) is forced by the product of the descent class
+\(5\) and the chart factor \(16\); choosing its sign is precisely choosing
+one normalized component.
+
+The sign of \(z\) is the remaining freedom in the chosen anti-invariant
+generator.  We normalize it by declaring the component supplied by \(U_t\)
+to have \(z=4\sqrt5\,\sigma_3\).  This does not strengthen the integral
+statement: comparison with the geometric incidence model still holds only
+over an unspecified \(\mathbf Z[1/N]\).
+
+\subsection{The golden involution}
+
+Choose the displayed normalized representatives
+\(a_0,\ldots,a_5\) of the ordered projective axes in \(\mathfrak m\), and
+write \(C=C_{\mathfrak m}\) and \(Z_C=Z_{\mathfrak m}\).  Their Gram
+matrix has the form
+\[
+ G=(t+2)I+tC,
+\qquad
+C=\begin{pmatrix}
+0&1&1&1&-1&-1\\
+1&0&-1&-1&-1&-1\\
+1&-1&0&1&1&-1\\
+1&-1&1&0&-1&1\\
+-1&-1&1&-1&0&-1\\
+-1&-1&-1&1&-1&0
+\end{pmatrix}.
+\]
+The frame operator \(\sum_i a_ia_i^{\mathsf T}\) commutes with the
+irreducible three-dimensional \(A_5\)-action, so it is scalar.  Its trace is
+\(6(t+2)\); division by the dimension gives
+\(\sum_i a_ia_i^{\mathsf T}=2(t+2)I_3\).  Hence
+\(G^2=2(t+2)G\).  Substituting \(G=(t+2)I+tC\) and using
+\((t+2)^2=5t^2\) gives \(C^2=5I\).  Changing signs of axis
+representatives switches \(C\) to \(DCD\), but every triangle product and
+hence \(Z_C\) is unchanged.  The off-diagonal entries of \(C^2\) also give
+\[
+ \sum_{k\ne i,j}C_{ij}C_{jk}C_{ki}=0.
+\]
+Thus the directional derivative of \(Z_C\) along \(\mathbf1\) vanishes, so
+\(Z_C(x+u\mathbf1)=Z_C(x)\) and the cubic descends to
+\(\Q^6/\Q\mathbf1\).
+
+Let \(a_i'\) denote the conjugate axes, obtained by \(t\mapsto1-t\), and
+let \(R\) be the exchanger of Section~\ref{sec:arithmetic}.  Direct
+substitution gives
+\[
+ Ra_i=t d_i a'_{p(i)},\qquad
+ p=(0,1,5,4,2,3),\qquad
+ (d_i)=(1,-1,1,1,1,1).
+\]
+Using \(t^2(1-t)=-t\), one obtains
+\[
+ d_id_jC_{p(i)p(j)}=-C_{ij}.
+\]
+Thus, at the golden fibre, conjugation transported by \(R\) changes \(C\)
+to \(-C\) and \(Z_C\) to \(-Z_C\).  The lone negative \(d_i\) is only a change of
+axis representatives and does not cause the reversal; switching alone
+leaves the triangle cubic fixed.
+
+No global marking of the varying configurations on \(B_-\) is needed or
+asserted.  The fixed section \(U_t\) selects \(B_+\), but does not by itself
+choose \(\mathfrak m\).  After \(\mathfrak m\) is fixed, we attach its
+constant source \([C_{\mathfrak m},Z_{\mathfrak m}]_{\rm or}\) to \(B_+\)
+and attach the deck-opposite source to \(B_-\), meaning that the normalized
+odd generator changes sign.  The calculation at \([xyz]\) proves that this
+relative convention agrees with the actual conjugate golden configuration
+there; it is not used to infer a pointwise conference labeling elsewhere.
+Since the normalized components remain disjoint above \(\sigma_3=0\), the
+two relative source labels extend there even though the literal
+two-configuration interpretation fails.
+
+\subsection{Transport to degree six}
+
+Write Hitchin's chart as
+\(\iota_t(y)=\sum_i y_iq_i^{(t)}\), with \(q_1=xyz\).  Since
+\(R(xyz)=-xyz\), equivariance and irreducibility of the four-module give
+\[
+ Rq_i^{(t)}=-q_i^{(1-t)}
+\]
+after transporting the five plane-triple labels.  Normalize the lift on
+\(B_+\) by \(q_1=xyz\); the deck-opposite source carries the lift
+\(-\iota_t\).  The displayed exchanger calculation shows that this
+normalization agrees with golden conjugation at \([xyz]\).  Thus the lift
+is part of the oriented source datum, rather than a purported global marking
+of the second family.
+
+The primitive integral map
+\[
+ \beta(y)_{ij}=y_i+y_j
+\]
+lands in the Petersen \((-2)\)-eigenspace and satisfies
+\[
+ \sum_{i<j}(y_i+y_j)^2=3\sum_i y_i^2,
+ \qquad
+ y_i=\frac13\sum_{j\ne i}\beta(y)_{ij}.
+\]
+Multiplicity one makes this comparison unique after the five labels and the
+normalization are fixed.  Reversing the chart lift reverses \(y\), the zonal harmonic
+\(F_y\), and its cubic integral.  The two signs in the normalized incidence
+cover therefore select the two signs of the exact Gaunt cubic relative to
+\(\mathfrak m\).  This proves Theorem~\ref{thm:orientation-source}.
+
+\subsection{Ambiguity ledger}
+
+The relative formulation uses the following complete action of the auxiliary
+choices.
+
+\begin{center}
+\begin{tabular}{@{}l p{0.65\linewidth}@{}}
+\hline
+operation & effect \\
+\hline
+axis switching &
+\(C\mapsto DCD\), while every triangle product and \(Z\) is fixed; this is
+the equivalence already built into the marked source. \\
+axis relabelling &
+simultaneously permutes the rows and columns of \(C\) and the variables of
+\(Z\); the theorem transports equivariantly and does not choose an order. \\
+five-label relabelling &
+simultaneously permutes the \(q_i\), the coordinates \(y_i\), and the
+two-subset labels; \(\sigma_3\) is fixed and \(\beta\) is equivariant.
+Relabelling only one side changes \(\mathfrak m\). \\
+chart scaling &
+rescales the linear identification and the transported cubic generator while
+leaving the projective chart fixed.  It is not quotiented: \(q_1=xyz\) fixes
+the normalization.  In particular, scaling by \(-1\) reverses the generator. \\
+golden Galois conjugation &
+after transport by \(R\), sends \(C\), \(Z\), and the normalized chart lift
+to their negatives at the golden fibre. \\
+incidence deck exchange &
+interchanges \(B_+\) and \(B_-\) and negates the odd generator; relative to
+\(\mathfrak m\), the attached source and harmonic generator are negated by
+definition. \\
+\hline
+\end{tabular}
+\end{center}
+
+Thus switching and coordinated relabelling do not change the comparison.
+Lift normalization and the cross-identification of the two five-labelled
+systems remain visible inputs.
+The theorem makes no descent claim for those inputs.
+
+There is no nonzero rotation-equivariant linear comparison between harmonic
+degrees three and six: they are nonisomorphic irreducible rotation modules of
+dimensions seven and thirteen.  The linear comparison used here is the unique
+marked \(A_5\)-intertwiner on the chosen Clebsch four-space, and it stops at
+the relative marked source class
+\([C_{\mathfrak m},Z_{\mathfrak m}]_{\rm or}\).
