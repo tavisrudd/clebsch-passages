@@ -1,5 +1,9 @@
 # Arithmetic and harmonic realizations of the Clebsch cubic
 
+## Read the paper
+
+[**Open the paper (PDF) →**](clebsch_passages.pdf)
+
 **Series:** *The Clebsch cubic: recovering, orienting, and realizing --- III*
 
 The shared progression is expository; this manuscript is logically
