@@ -53,7 +53,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "694628c39f3bdac503c323c19ae58e286be1cc9d1d4c7a02ca30994291a9bee2",
+      "sha256": "e41c7ea3fb25a8ab2a69f8ea23cfd17dddb2f4f0ddcf4a5ce11855082c85c477",
       "source_blob": null
     },
     {
@@ -316,22 +316,22 @@
       "source_blob": "b9360281caf3047cf5b656129fa9d550d2ae3adb"
     },
     {
-      "bytes": 5328,
+      "bytes": 5456,
       "mode": "100644",
       "path": "verification/passages_axioms.txt",
       "rewrites": [],
       "role": "verification",
-      "sha256": "9fb2ba9504b41034b3a41bd38cfc738ac1b2c5d876289bfe4c6fed76bb4a8f41",
-      "source_blob": "c146b79efaac7c7fdf57254bc0aeb11210768ebf"
+      "sha256": "87faff61f0fbe1b39944e1d8506653244cc04dc790e2e2c3a6dcd0b34fc24b57",
+      "source_blob": "d09cd7a144c27c4d9eb97c24c602f092aad9f916"
     },
     {
-      "bytes": 7489,
+      "bytes": 7637,
       "mode": "100644",
       "path": "verification/passages_formal.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "4e2c8486421153f1356fc52deaa1636b00b316681eab973b9b4816a0c294d4ee",
-      "source_blob": "2e1e651e0c31791a670cae1d0ee725d347d4e318"
+      "sha256": "575e61a7e55673128c4ea543241162763fd2231677b65cbb04e1a8ecdef40a7b",
+      "source_blob": "a44e47dd0b2b46ec46ff056fbd761f1c1d7d27ea"
     },
     {
       "bytes": 13823,
@@ -400,5 +400,5 @@
   "repository": "clebsch-passages",
   "repository_map_sha256": "778097310085993d06d69cffee02c2c7143f960daec162162d38b71a73bb2b67",
   "schema_version": 1,
-  "source_commit": "b651e12630864ca55ee7737b4205a05d8d9c965d"
+  "source_commit": "27ac009e02ad44c58f85f0ac7e63b91017dea30b"
 }
