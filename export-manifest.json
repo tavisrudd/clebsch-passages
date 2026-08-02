@@ -66,7 +66,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "a710984b8750e44e3072b98d2a00672539603e58ddf53ab9ac08c8cc9b87d0b3",
+      "sha256": "0fae6188114a4aa399a3fbb0b0c257bf9fd8ec4e10383d54d9a5074110e86f76",
       "source_blob": null
     },
     {
@@ -79,31 +79,31 @@
       "source_blob": "17174856a3c1367f86a6e31bc48bcbeff2f304bf"
     },
     {
-      "bytes": 205324,
+      "bytes": 206616,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "ca250c07c189b5613741156562b807c068ff0177ead4aba30bb598dace38154b",
-      "source_blob": "b080d0e2a22c9c52493e24a24ab3fda1c2f052c0"
+      "sha256": "98ea5154c2637a6bf1899cc15e70f4229c55013c6411a4970368a2a53c49abc1",
+      "source_blob": "c334599886923f092d9b5aebf46f5d72847692ad"
     },
     {
-      "bytes": 3880,
+      "bytes": 4000,
       "mode": "100644",
       "path": "clebsch_passages.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "c41c6c867dc4841f7f7e6bd4b8279fada0c5efb69fe8d33c8c7dde7d346c8296",
-      "source_blob": "619924d9ba5b375b32c853287c792a1014e0fe5f"
+      "sha256": "bccb0327be9ccddaed2941c107755cf349ec390ffaed3df841bcd596ec934d2e",
+      "source_blob": "f20b9686ec6d3ba06421ff20a5d3062570568fdc"
     },
     {
-      "bytes": 6167,
+      "bytes": 6591,
       "mode": "100644",
       "path": "literature-boundaries.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "7444d10bb67f2a0e0bf74b979b0b70c47c2028c490cd17d75aece40dd9d05ea5",
-      "source_blob": "8c9440d136a269a663d9a969ea04e72a05deb2c4"
+      "sha256": "09dee382da0f509395014bdf34fd0e519bb5278adf9ccdab1242d8b6e501d21f",
+      "source_blob": "3ae9ec34f23b115ebd4f902021c4a9e6e678eadf"
     },
     {
       "bytes": 1774,
@@ -115,13 +115,13 @@
       "source_blob": "466ab3bccd0ea9843cc19e1f2ded85a610843d08"
     },
     {
-      "bytes": 12526,
+      "bytes": 12670,
       "mode": "100644",
       "path": "sections/01-introduction.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "462dc5bee18de8e8897b06eb60837260d311f52edceb364cffa3fd71aa23182c",
-      "source_blob": "4f65ce5f2b22aee41c13c15dd08c599b272b4e10"
+      "sha256": "dbf16a7bf40f3ca9bc1a5475452d215e6f24f20a054506f3a85056c54a5efadc",
+      "source_blob": "0b1d1880afea1e7be681998791c64b9d4138c995"
     },
     {
       "bytes": 13242,
@@ -151,13 +151,13 @@
       "source_blob": "bc34601ec4c580332d336332d7dda1553a12aa73"
     },
     {
-      "bytes": 24042,
+      "bytes": 24642,
       "mode": "100644",
       "path": "sections/05-golden-operator.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "64446d3074cf684bc5884fb2f649de4b7fede5bdbe603953faf118fda418960c",
-      "source_blob": "276370bb41bb5511b81829d6a26b0793e6113c20"
+      "sha256": "6036b73ae02b4063c902ded81702b0fc1ee2854a0a530dacf34a8bddb27cd9d6",
+      "source_blob": "33cb7ad0cb0811245f5501fc5c9acf8e38718cce"
     },
     {
       "bytes": 8605,
@@ -196,13 +196,13 @@
       "source_blob": "249001dd4e35fe17f24197d867bd7d2ffaeb287c"
     },
     {
-      "bytes": 5277,
+      "bytes": 5658,
       "mode": "100644",
       "path": "sections/10-references.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "450ed024901ace94e82ad698a3e2aaaa841c01d62ef204950847fcc468293f38",
-      "source_blob": "a75bf2d4b03dcd3aec5ed5925d3cea8fc34efcea"
+      "sha256": "adfe54289d4f19789f41b0ca9de828541a06f5a9fb7cea4dab55289997d4d892",
+      "source_blob": "e1a01adac726e9ad24a08c62c9675f1e6363e507"
     },
     {
       "bytes": 4527,
@@ -379,8 +379,8 @@
       "path": "verification/statement_identity.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "57aed5983a5818fe64ef4a052bf2ec579027cf5d33e59a3d6d3b9feb508bc1c0",
-      "source_blob": "0ae4d6051d1b664bbc6aa8fd64dc533bd3a32b65"
+      "sha256": "40bd70c4a44f5f9e7edea8c1ddc53b42f8eb56ad7ab042fc0517557437e57fc8",
+      "source_blob": "f7c97ebe2f3b6e884aabc19e4d5ed696c3a11cdf"
     },
     {
       "bytes": 13800,
@@ -436,9 +436,9 @@
   "paper_ids": [
     "clebsch_passages"
   ],
-  "paper_registry_sha256": "8011db50e7b5f0e4d28055eaa5929193e24b2efc561a7de729753c7a0e9bc153",
+  "paper_registry_sha256": "ffbad458fb10db264527156743cb21935c257fea078c220573d4aad85e5499fc",
   "repository": "clebsch-passages",
-  "repository_map_sha256": "1ebaa7d8d43e7b1fe6bfd65da33911f71b65628d480cdaaafc2e4a9d0c61495d",
+  "repository_map_sha256": "7edc17cdc004f170a8543b64ceba813a2aa4de563e8b48d30e8c70c6f52baa05",
   "schema_version": 1,
-  "source_commit": "f840f292c1db9f4933508962f1eb4f1599008d83"
+  "source_commit": "8da70c70f876301623f48673835dbf9e4e6df2e0"
 }
