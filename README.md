@@ -1,8 +1,4 @@
-# Arithmetic and harmonic realizations of the Clebsch cubic
-
-## Read the paper
-
-[**Open the paper (PDF) →**](clebsch_passages.pdf)
+# Golden descent and operator realizations of the Clebsch cubic
 
 **Series:** *The Clebsch cubic: recovering, orienting, and realizing --- III*
 
@@ -29,6 +25,8 @@ the standard rational harmonic space.
 - `clebsch_passages.tex`: manuscript driver.
 - `sections/`: one file for each mathematical stage.
 - `ARTIFACT.md`: stable artifact description and trust boundary.
+- `claim-proof-novelty-ledger.md`: claim-level proof, precedence, and wording
+  boundary.
 - `release_files.json`: public packaging allowlist.
 - `verification/trust_manifest.json`: claim/evidence/status ledger.
 - `verification/statement_identity.json`: frozen theorem surface.
