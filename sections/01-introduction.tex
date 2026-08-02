@@ -16,9 +16,10 @@ general \([f]\in\mathbf P(H)\) two icosahedral six-axis configurations:
 equivalently, two Mukai--Umemura isotropic three-planes \(U\subset H\) with
 \(f\perp U\) \cite{HitchinIcosahedron,HitchinBundles}.  The incidence
 variety of pairs \(([f],U)\) is therefore generically a degree-two cover of
-\(\mathbf P(H)\).  We determine its rational square class and retain the
-resulting golden orientation through two further realizations.  On the
-six-axis carrier it becomes a conference operator whose Pfaffian,
+\(\mathbf P(H)\).  We determine its rational square class and, after fixing
+the marked bridge datum below, compare its chosen sign with two further
+realizations.  On the six-axis carrier the marked sign determines a
+conference operator whose Pfaffian,
 determinant, and middle-exterior shadows give the classical Joubert, Segre,
 Igusa, and diagonal Clebsch models.  On the ten face axes it returns as the
 degree-six Gaunt cubic.
@@ -66,6 +67,10 @@ chart of the conjugate icosahedron.  The fibre over the rational point
 \([xyz]\) is nevertheless a complete reduced fibre with residue algebra
 \(\Q(\sqrt5)\).
 \end{theorem}
+
+The underlying Galois exchange of the two conjugate icosahedra is classical
+\cite[Section~1.3]{HMSVOuter}.  The theorem identifies its occurrence here
+with the square class of Hitchin's incidence cover.
 
 The factor \(5\) has a concrete descent meaning: the cubic \([xyz]\) and
 its unordered geometric fibre are rational, but choosing either
@@ -149,31 +154,20 @@ translates of \(Z_{\mathfrak m}\) are simultaneously triangle cubics,
 middle-exterior diagonals, commutator Pfaffians, and cross-golden
 determinants.  Their Joubert coordinates land on the Segre cubic, whose
 coordinate sections are diagonal Clebsch cubic surfaces; centered squaring
-is the classical Segre--Igusa polar map \cite{HMSV,HMSVOuter}.  The marked
-datum defines the operator family; the theorem recognizes its four cubic
-shadows.  This is the structural passage between the arithmetic source and
-the harmonic theorem below.
-
-\begin{theorem}[Degree-six harmonic restriction]
-\label{thm:harmonic-main}
-Let \(u_{ij}\), \(1\leq i<j\leq5\), be the explicitly labelled unit axes
-through opposite icosahedral faces in \eqref{eq:face-axis-labels}, and set
-\[
- F_y(\omega)=\sum_{i<j}(y_i+y_j)P_6(u_{ij}\mathbin{\cdot}\omega),
- \qquad
- P_6(s)=\frac{231s^6-315s^4+105s^2-5}{16}.
-\]
-The coefficient vectors \((y_i+y_j)_{i<j}\) form the Petersen
-\((-2)\)-eigenspace, and their zonal harmonics give an injective copy of
-\(V\) in the real degree-six spherical-harmonic space \(\mathcal H_6\).
-With
-\(\langle f,g\rangle=(4\pi)^{-1}\int_{S^2}fg\), the spherical cubic on this
-copy is
-\[
- \frac1{4\pi}\int_{S^2}F_y(\omega)^3\,d\omega
- =-\frac{784000}{1247103}\sigma_3(y).
-\]
-\end{theorem}
+is the classical Segre--Igusa polar map
+\cite[Sections~2.1--2.2]{HMSVOuter}.  The marked
+datum defines the operator family.  Before recognizing its four cubic
+shadows, Theorem~\ref{thm:balanced-exchange-rigidity} shows that order six is
+the unique nontrivial symmetric conference order whose balanced exchange
+spectrum is independent of the cut.  At higher orders the classical
+determinant-\((-3)\) design still fixes the mean and variance of the first
+nonconstant exchange moment.  As a secondary reverse consequence,
+Theorem~\ref{thm:aligned-faithfulness} shows that from order ten onward the
+marked design recovers the conference signing up to switching and global
+negation, and a quadratic family of selected determinant tests already
+suffices.  This operator stage
+is the structural passage between the arithmetic source and the harmonic
+theorem below.
 
 The arithmetic proof has three steps.  Hitchin's degree and branch-sextic
 calculation reduces the generic extension to

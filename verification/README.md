@@ -1,13 +1,13 @@
 # clebsch-passages verification
 
-`trust_manifest.json` is the seven-row claim/evidence map.
-`statement_identity.json` freezes the six theorem-like statements in
+`trust_manifest.json` is the nine-row claim/evidence map.
+`statement_identity.json` freezes the eight theorem-like statements in
 manuscript order.
 
 Run from the repository root:
 
 ```text
-python3 papers/clebsch-passages/verification/verify_release.py
+python3 verification/verify_release.py
 ```
 
 The aggregate gate verifies:
@@ -22,15 +22,15 @@ The aggregate gate verifies:
 The statement extractor can be run separately with
 
 ```text
-python3 papers/clebsch-passages/verification/extract_statement_identity.py --check
+python3 verification/extract_statement_identity.py --check
 ```
 
 The harmonic bundle is replayed with
 
 ```text
-python3 papers/clebsch-passages/verification/evidence/harmonic_clebsch.py --check
-python3 papers/clebsch-passages/verification/evidence/harmonic_clebsch_replay.py
-sha256sum -c papers/clebsch-passages/verification/evidence/harmonic_clebsch.sha256
+python3 verification/evidence/harmonic_clebsch.py --check
+python3 verification/evidence/harmonic_clebsch_replay.py
+sha256sum -c verification/evidence/harmonic_clebsch.sha256
 ```
 
 It reconstructs the explicitly labelled face axes, the Petersen graph, the
@@ -40,9 +40,9 @@ moments, and the conversion to the standard unnormalized \(W_6\).
 The arithmetic bundle is deliberately smaller than its human proof:
 
 ```text
-python3 papers/clebsch-passages/verification/evidence/arithmetic_cover.py --check
-python3 papers/clebsch-passages/verification/evidence/arithmetic_cover_replay.py
-sha256sum -c papers/clebsch-passages/verification/evidence/arithmetic_cover.sha256
+python3 verification/evidence/arithmetic_cover.py --check
+python3 verification/evidence/arithmetic_cover_replay.py
+sha256sum -c verification/evidence/arithmetic_cover.sha256
 ```
 
 It checks the explicit golden configurations over
@@ -54,9 +54,9 @@ certificate branch.
 The orientation-source bundle is replayed with
 
 ```text
-python3 papers/clebsch-passages/verification/evidence/orientation_source.py --check
-python3 papers/clebsch-passages/verification/evidence/orientation_source_replay.py
-sha256sum -c papers/clebsch-passages/verification/evidence/orientation_source.sha256
+python3 verification/evidence/orientation_source.py --check
+python3 verification/evidence/orientation_source_replay.py
+sha256sum -c verification/evidence/orientation_source.sha256
 ```
 
 For the displayed marking, it checks the scalar factorization of the pulled-back
@@ -81,7 +81,7 @@ python3 verification/verify_passages_lean.py \
   --lean-root /path/to/formal-artifact
 ```
 
-`passages_formal.json` maps each of the seven manuscript rows to exact Lean
+`passages_formal.json` maps each of the nine manuscript rows to exact Lean
 declarations and records the missing geometric hypotheses.  Its gate proves
 the abstract pinching, conductor, involution, golden-character, tight-frame,
 switching, Petersen, and fixed-line mechanisms without claiming the global
@@ -90,8 +90,10 @@ moment.
 
 The operator consolidation uses the expanded golden-return theorem package as
 a second pinned formal map.  It covers the conference, triangle, two-graph,
-middle-exterior, support-recovery, golden-descent, and fixed-conference
-commutator-Pfaffian mechanisms.  Outer-family coherence, the cross-golden
+middle-exterior, support-recovery, golden-descent, fixed-conference
+commutator-Pfaffian, and order-six signed-triangle mechanisms.  The general
+inclusion/Ramsey exchange-rigidity proof, aligned-design faithfulness and its
+quadratic decoder, outer-family coherence, the cross-golden
 determinant comparison, and the classical Joubert--Segre--Igusa
 identifications remain human proof boundaries.
 It is replayed against a checkout of the formal artifact with
@@ -105,5 +107,5 @@ python3 verification/verify_golden_return_lean.py \
 gate, declarations, and exact exclusions.  `golden_return_axioms.txt` records
 the complete pinned `#print axioms` output, including each native-decision
 terminal; replay rejects any change to that report.  This supplemental gate
-contributes partial mechanism coverage to `OPER-1`; no manuscript theorem
+contributes partial mechanism coverage to `OPER-1`, `OPER-3`, and `OPER-4`; no manuscript theorem
 takes Lean as a proof dependency.
