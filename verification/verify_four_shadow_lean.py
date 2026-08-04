@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replay the formal golden-conference and middle-exterior theorem gate."""
+"""Verify the pinned Lean sources and axiom audit for cubic-shadow recognition."""
 
 from __future__ import annotations
 
@@ -11,9 +11,9 @@ from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
-MANIFEST = HERE / "golden_return_formal.json"
-AXIOM_REPORT = HERE / "golden_return_axioms.txt"
-CLOSURE_INVENTORY = HERE / "golden_return_source_closure.json"
+MANIFEST = HERE / "four_shadow_formal.json"
+AXIOM_REPORT = HERE / "four_shadow_axioms.txt"
+CLOSURE_INVENTORY = HERE / "four_shadow_source_closure.json"
 
 
 def sha256(path: Path) -> str:
@@ -32,12 +32,12 @@ def parse_axioms(text: str) -> dict[str, list[str]]:
     result: dict[str, list[str]] = {}
     for match in pattern.finditer(text):
         declaration = match.group(1)
-        body = match.group(3)
         if declaration in result:
             raise SystemExit(
-                "golden-return formal replay: FAIL "
+                "four-shadow formal replay: FAIL "
                 f"[duplicate axiom output for {declaration}]"
             )
+        body = match.group(3)
         result[declaration] = (
             []
             if body is None
@@ -46,18 +46,33 @@ def parse_axioms(text: str) -> dict[str, list[str]]:
     return result
 
 
-def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lean-root", type=Path, required=True)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument(
+        "--source-only",
+        action="store_true",
+        help="check the pinned transitive source closure without a live gate",
+    )
+    mode.add_argument(
+        "--axiom-log",
+        type=Path,
+        help="stdout from elaborating the focused import-only gate",
+    )
+    args = parser.parse_args()
+
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    lean_root = args.lean_root.resolve()
     toolchain = (lean_root / "lean-toolchain").read_text(encoding="utf-8").strip()
     if toolchain != manifest["lean_toolchain"]:
-        raise SystemExit(
-            f"golden-return formal replay: FAIL [toolchain {toolchain!r}]"
-        )
+        raise SystemExit(f"four-shadow formal replay: FAIL [toolchain {toolchain!r}]")
     if sha256(AXIOM_REPORT) != manifest["axiom_report_sha256"]:
-        raise SystemExit("golden-return formal replay: FAIL [axiom report hash]")
+        raise SystemExit("four-shadow formal replay: FAIL [axiom report hash]")
     if sha256(Path(__file__).resolve()) != manifest["verifier_sha256"]:
-        raise SystemExit("golden-return formal replay: FAIL [verifier hash]")
+        raise SystemExit("four-shadow formal replay: FAIL [verifier hash]")
     if sha256(CLOSURE_INVENTORY) != manifest["source_closure_sha256"]:
-        raise SystemExit("golden-return formal replay: FAIL [source closure hash]")
+        raise SystemExit("four-shadow formal replay: FAIL [source closure hash]")
 
     provenance = manifest.get("axiom_report_provenance")
     if provenance is not None:
@@ -67,20 +82,20 @@ def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
         log = HERE.parent / provenance["gate_stdout"]
         if not log.is_file():
             raise SystemExit(
-                "golden-return formal replay: FAIL [missing gate stdout "
+                "four-shadow formal replay: FAIL [missing gate stdout "
                 f"{provenance['gate_stdout']}]"
             )
         if sha256(log) != provenance["gate_stdout_sha256"]:
-            raise SystemExit("golden-return formal replay: FAIL [gate stdout hash]")
+            raise SystemExit("four-shadow formal replay: FAIL [gate stdout hash]")
 
     inventory = json.loads(CLOSURE_INVENTORY.read_text(encoding="utf-8"))
     if inventory.get("roots") != [manifest["gate_module"]]:
-        raise SystemExit("golden-return formal replay: FAIL [source closure root]")
+        raise SystemExit("four-shadow formal replay: FAIL [source closure root]")
     observed_sources = {
         item["path"]: item["sha256"] for item in inventory.get("sources", [])
     }
     if observed_sources != manifest["source_sha256"]:
-        raise SystemExit("golden-return formal replay: FAIL [source closure inventory]")
+        raise SystemExit("four-shadow formal replay: FAIL [source closure inventory]")
 
     # A declaration keyword may be preceded by attributes and by any number of
     # modifiers, so anchoring on the bare keyword at line start is not a check:
@@ -94,7 +109,7 @@ def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
     for external in inventory.get("external_imports", []):
         if external != "Mathlib" and not external.startswith("Mathlib."):
             raise SystemExit(
-                "golden-return formal replay: FAIL [external import outside Mathlib: "
+                "four-shadow formal replay: FAIL [external import outside Mathlib: "
                 f"{external}]"
             )
 
@@ -104,14 +119,13 @@ def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
     # Mechanisms that would move a proof outside the kernel without introducing
     # an axiom the gate's `#print axioms` lines would show.  `set_option` is
     # covered because `debug.skipKernelTC` disables kernel typechecking outright
-    # and leaves no trace in `#print axioms`.  This gate's closure no longer
-    # uses compiled evaluation anywhere, so `native_decide` is refused outright
-    # rather than declared as a trust boundary.
+    # and leaves no trace in `#print axioms`.
     mechanisms = re.compile(
         r"\bnative_decide\b"
         r"|\bdecide\b[^\n]*\+\s*native"
         r"|\bnative\s*:=\s*true"
-        r"|(?:@\[|attribute\s*\[)[^\]]*(?:implemented_by|extern)"
+        r"|"
+        r"(?:@\[|attribute\s*\[)[^\]]*(?:implemented_by|extern)"
         r"|\bofReduceBool\b"
         r"|\bset_option\s+(?:debug\.skipKernelTC|allowUnsafeReducibility"
         r"|debug\.byAsSorry|debug\.proofAsSorry"
@@ -128,14 +142,9 @@ def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
     for relative, expected in manifest["source_sha256"].items():
         source = lean_root / relative
         if not source.is_file():
-            raise SystemExit(
-                f"golden-return formal replay: FAIL [missing {relative}]"
-            )
-        actual = sha256(source)
-        if actual != expected:
-            raise SystemExit(
-                f"golden-return formal replay: FAIL [hash {relative}]"
-            )
+            raise SystemExit(f"four-shadow formal replay: FAIL [missing {relative}]")
+        if sha256(source) != expected:
+            raise SystemExit(f"four-shadow formal replay: FAIL [hash {relative}]")
         text = source.read_text(encoding="utf-8")
         if (
             "sorry" in text
@@ -144,45 +153,21 @@ def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
             or workflow_id.search(text)
             or workflow_prose.search(text)
         ):
-            raise SystemExit(
-                f"golden-return formal replay: FAIL [source policy {relative}]"
-            )
-    print("golden-return formal replay: PASS [pinned sources and toolchain]")
+            raise SystemExit(f"four-shadow formal replay: FAIL [source policy {relative}]")
 
-
-def check_axiom_log(manifest: dict[str, object], axiom_log: Path) -> None:
     expected = parse_axioms(AXIOM_REPORT.read_text(encoding="utf-8"))
-    observed = parse_axioms(axiom_log.read_text(encoding="utf-8"))
     declarations = set(manifest["audited_declarations"])
     if set(expected) != declarations:
         raise SystemExit(
-            "golden-return formal replay: FAIL [manifest/report declaration mismatch]"
+            "four-shadow formal replay: FAIL [manifest/report declaration mismatch]"
         )
-    if observed != expected:
-        raise SystemExit("golden-return formal replay: FAIL [axiom report mismatch]")
-    print("golden-return formal replay: PASS [pinned sources and supplied axiom audit]")
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--lean-root", type=Path, required=True)
-    mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument(
-        "--source-only",
-        action="store_true",
-        help="check the pinned transitive source closure without a live gate",
-    )
-    mode.add_argument(
-        "--axiom-log",
-        type=Path,
-        help="stdout from a guarded elaboration of the import-only gate",
-    )
-    args = parser.parse_args()
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    lean_root = args.lean_root.resolve()
-    check_sources(lean_root, manifest)
     if args.axiom_log is not None:
-        check_axiom_log(manifest, args.axiom_log.resolve())
+        observed = parse_axioms(args.axiom_log.read_text(encoding="utf-8"))
+        if observed != expected:
+            raise SystemExit("four-shadow formal replay: FAIL [axiom report mismatch]")
+        print("four-shadow formal replay: PASS [pinned sources and axiom audit]")
+    else:
+        print("four-shadow formal replay: PASS [pinned sources and toolchain]")
     return 0
 
 

@@ -78,34 +78,99 @@ manuscript row claimed`.  The current-paper gate is replayed with
 
 ```text
 python3 verification/verify_passages_lean.py \
-  --lean-root /path/to/formal-artifact
+  --lean-root /path/to/formal-artifact --source-only
 ```
 
 `passages_formal.json` maps each of the nine manuscript rows to exact Lean
 declarations and records the missing geometric hypotheses.  Its gate proves
 the abstract pinching, conductor, involution, golden-character, tight-frame,
-switching, Petersen, and fixed-line mechanisms without claiming the global
-Hitchin correspondences, face-axis addition theorem, or raw spherical
-moment.
+switching, Petersen, fixed-line, and normalized aligned-design mechanisms.
+For aligned designs it checks the two-cut classifier by kernel decision and
+proves the third-point disambiguation, overlap consistency, signing transport,
+four-by-four determinant identity, and query polynomial symbolically.  The
+two bounds behind the triangle Ramsey equality on six labelled points, and the
+aligned anchor they produce, are kernel-checked and printed by the gate; the
+finite-set extension, the normalization from an arbitrary labelled two-graph,
+and the distinctness of the six anchor points from each other and from the
+root remain human inputs, as do the global Hitchin correspondences, face-axis
+addition theorem, and raw spherical moment.
+`passages_source_closure.json` is the exact project-local transitive import
+closure produced by the repository import-closure tool; the verifier pins the
+inventory, every listed source, and its own bytes.
+
+Repository validation elaborates the gate through the guarded Lean entry
+point.  Its disk-backed standard output is checked separately with
+
+```text
+python3 verification/verify_passages_lean.py \
+  --lean-root /path/to/formal-artifact --axiom-log /path/to/gate-stdout.log
+```
+
+The replay program never starts Lean or Lake itself.
 
 The operator consolidation uses the expanded golden-return theorem package as
 a second pinned formal map.  It covers the conference, triangle, two-graph,
 middle-exterior, support-recovery, golden-descent, fixed-conference
 commutator-Pfaffian, and order-six signed-triangle mechanisms.  The general
-inclusion/Ramsey exchange-rigidity proof, aligned-design faithfulness and its
-quadratic decoder, outer-family coherence, the cross-golden
+inclusion/Ramsey exchange-rigidity proof, the classical inputs to the
+aligned-design faithfulness argument, outer-family coherence, the cross-golden
 determinant comparison, and the classical Joubert--Segre--Igusa
 identifications remain human proof boundaries.
 It is replayed against a checkout of the formal artifact with
 
 ```text
 python3 verification/verify_golden_return_lean.py \
-  --lean-root /path/to/formal-artifact
+  --lean-root /path/to/formal-artifact --source-only
 ```
 
 `golden_return_formal.json` fixes the Lean toolchain, source hashes, audit
 gate, declarations, and exact exclusions.  `golden_return_axioms.txt` records
-the complete pinned `#print axioms` output, including each native-decision
-terminal; replay rejects any change to that report.  This supplemental gate
+the complete pinned `#print axioms` output; replay rejects any change to that
+report.  This supplemental gate
 contributes partial mechanism coverage to `OPER-1`, `OPER-3`, and `OPER-4`; no manuscript theorem
 takes Lean as a proof dependency.
+`golden_return_source_closure.json` pins the exact project-local transitive
+import closure.  A guarded gate log is checked by replacing `--source-only`
+with `--axiom-log /path/to/gate-stdout.log`; the replay program does not invoke
+Lean or Lake directly.
+
+The four-shadow recognition gate is the third pinned formal map, replayed the
+same way:
+
+```text
+python3 verification/verify_four_shadow_lean.py \
+  --lean-root /path/to/formal-artifact --source-only
+```
+
+It covers the translation extraction, pair moments, diagonal and scalar
+square, pentagon gauge, ten inner products, cubic homogeneity, and the
+pentagon classification in both directions.  As with the other two gates,
+every audited terminal depends only on `propext`, `Classical.choice` and
+`Quot.sound`, and the replay enforces that by refusing compiled evaluation
+anywhere in the pinned closure, and any external import outside Mathlib,
+rather than merely recording the boundary.  The rank-14 weighted Jacobian calculation and any global
+classification of remote weighted solutions are not formalized.
+`four_shadow_formal.json`, `four_shadow_axioms.txt` and
+`four_shadow_source_closure.json` play the same roles as their counterparts
+above.
+
+Each gate's axiom report is generated from a tracked build log rather than
+written by hand.  `evidence/gate_stdout/passages.stdout.txt`,
+`golden_return.stdout.txt` and `four_shadow.stdout.txt` are the standard
+output of the gate builds the reports were taken from; each manifest pins the
+log's bytes under `axiom_report_provenance`, and the replay checks that pin.
+To regenerate a report, or to check one against its log:
+
+```text
+python3 verification/extract_axiom_report.py \
+  --stdout verification/evidence/gate_stdout/<gate>.stdout.txt \
+  --output verification/<gate>_axioms.txt
+
+python3 verification/verify_<gate>_lean.py \
+  --lean-root /path/to/formal-artifact \
+  --axiom-log verification/evidence/gate_stdout/<gate>.stdout.txt
+```
+
+`extract_source_closure.py` regenerates a closure inventory from a Lean tree
+the same way.  Neither a report nor an inventory may be edited by hand: the
+verifiers compare them byte for byte.

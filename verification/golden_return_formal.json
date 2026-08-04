@@ -1,24 +1,4 @@
 {
-  "schema": "clebsch-golden-return-formal-v1",
-  "lean_toolchain": "leanprover/lean4:v4.32.0-rc1",
-  "gate_module": "RelativeConicArcs.Gates.ClebschGoldenReturn",
-  "axiom_report_sha256": "6d0077951263f4008c3a0f7210efa1f1eda13de9bd5a8efafcbb174c8a28e2e9",
-  "source_sha256": {
-    "RelativeConicArcs/ClebschGoldenConference.lean": "9a2cc1a46d68a3b08576cc7227dd044a8bfd7104f8e36ab5ca91e94c33cce7b2",
-    "RelativeConicArcs/ClebschTwoGraph.lean": "f17562813c992c291f02e28231aab66c654e89826292fd55071818f0edcf2089",
-    "RelativeConicArcs/ClebschMiddleExterior.lean": "bcf3a769432cb25cd4c6e1c005679243dfc90161781a9cd8350be772827db460",
-    "RelativeConicArcs/ClebschMiddleExteriorSquareRows012To023.lean": "9c4761a58af3cbc7b9405422adc010bf8232d958f46b0e6ee3413c08206c3a28",
-    "RelativeConicArcs/ClebschMiddleExteriorSquareRows024To045.lean": "0a2fbab400572940ff63ce7e37017360ace2db02649a205f092e75673d93346e",
-    "RelativeConicArcs/ClebschMiddleExteriorSquareRows123To135.lean": "ca30dc20ef6d87c424c830fbbef5506b704f1d48fd3874a8b3697555aa00fc37",
-    "RelativeConicArcs/ClebschMiddleExteriorSquareRows145To345.lean": "a2355c3675286b1b2b17051dcd2a9c21d8f3c6e0278db735cd8c5f89accad870",
-    "RelativeConicArcs/ClebschMiddleExteriorSquare.lean": "7db91fe353a65de171c7a9907ccd6eaeb40d3210be60fe947efec8246a13b7ee",
-    "RelativeConicArcs/ClebschMiddleExteriorDiagonal.lean": "fc5ff13994581026438b443c82e62798851f9f835e4b0df25dcbb50712e9583a",
-    "RelativeConicArcs/ClebschMiddleExteriorSupport.lean": "6673976d33f8c98b46182f78639314ccc11f2049d65db058f7a2316a0d99b4a0",
-    "RelativeConicArcs/ClebschGoldenDescent.lean": "0bd348a2e7054c4385f2a6fc0683f0e159996906647ad010156227e50e20a395",
-    "RelativeConicArcs/ClebschOperatorShadows.lean": "5dcf33b398d8f069fd039bd2d17956e1ed81c5819e5753d00a6faba44a5bddf7",
-    "RelativeConicArcs/ConferenceCutSpectrum.lean": "681314297d88c806e640f6f8796f4d1d1a34b47178159d5cdabc53d52f68ac97",
-    "RelativeConicArcs/Gates/ClebschGoldenReturn.lean": "e6716d66fdc8fa8885066c45d7a16fdc13cd121048a8c89c3651fdc65b1f738d"
-  },
   "audited_declarations": [
     "RelativeConicArcs.ClebschGoldenConference.conferenceMatrix_sq",
     "RelativeConicArcs.ClebschGoldenConference.conferenceMatrix_transpose",
@@ -31,6 +11,11 @@
     "RelativeConicArcs.ClebschTwoGraph.switch_eq_reconstructed_triangleSign",
     "RelativeConicArcs.ClebschTwoGraph.reconstructed_triangle_root",
     "RelativeConicArcs.ClebschTwoGraph.reconstructed_triangle_nonroot",
+    "RelativeConicArcs.ClebschMiddleExterior.tripleSet_complementIndex",
+    "RelativeConicArcs.ClebschMiddleExterior.eq_complementIndex_iff",
+    "RelativeConicArcs.ClebschMiddleExterior.concatenation_bijective",
+    "RelativeConicArcs.ClebschMiddleExterior.hodgeSign_eq_neg_one_pow_inversions",
+    "RelativeConicArcs.ClebschMiddleExterior.hodgeSign_mul_complement",
     "RelativeConicArcs.ClebschMiddleExterior.hodgeMatrix_sq",
     "RelativeConicArcs.ClebschMiddleExterior.hodgeMatrix_complement_entry",
     "RelativeConicArcs.ClebschMiddleExterior.middleExterior_eq_hodge_mul",
@@ -49,9 +34,94 @@
     "RelativeConicArcs.ClebschOperatorShadows.pfaffianSix_conferenceBracket_eq_four_triangleCubic",
     "RelativeConicArcs.ConferenceCutSpectrum.signedTriangle_sq"
   ],
+  "axiom_report_provenance": {
+    "build_run_id": "run-20260804-200729-e9005914",
+    "gate_stdout": "verification/evidence/gate_stdout/golden_return.stdout.txt",
+    "gate_stdout_sha256": "09b38e78a56b35588a01a9dee065b19d4c9475862d100ace176b939d98c919c1",
+    "generator": "verification/extract_axiom_report.py",
+    "note": "The axiom report is the #print axioms diagnostics of the tracked gate stdout above, one declaration per line. Regenerate it with the named generator; never edit it by hand."
+  },
+  "axiom_report_sha256": "88aa1edc3edc222a923b73010d81d0d3e6fcba3660110c3fad8bc17dbb7e9c2d",
+  "claim_map": {
+    "OPER-1": {
+      "coverage": "partial mechanism; no full row claim",
+      "declarations": [
+        "RelativeConicArcs.ClebschGoldenConference.conferenceMatrix_sq",
+        "RelativeConicArcs.ClebschGoldenConference.conferenceMatrix_transpose",
+        "RelativeConicArcs.ClebschGoldenConference.conferenceMatrixOver_sq",
+        "RelativeConicArcs.ClebschGoldenConference.conference_triangleSigns",
+        "RelativeConicArcs.ClebschGoldenConference.conference_triangleCubic_translate",
+        "RelativeConicArcs.ClebschMiddleExterior.hodgeMatrix_sq",
+        "RelativeConicArcs.ClebschMiddleExterior.hodgeMatrix_complement_entry",
+        "RelativeConicArcs.ClebschMiddleExterior.middleExterior_eq_hodge_mul",
+        "RelativeConicArcs.ClebschMiddleExterior.middleExterior_sq",
+        "RelativeConicArcs.ClebschMiddleExterior.middleExterior_diagonal",
+        "RelativeConicArcs.ClebschMiddleExterior.middleExterior_mod_two_eq_one_iff",
+        "RelativeConicArcs.ClebschMiddleExterior.complementIndex_involutive",
+        "RelativeConicArcs.ClebschMiddleExterior.commonIntersectionOneNeighbors_eq",
+        "RelativeConicArcs.ClebschMiddleExterior.commonIntersectionOneNeighbors_eq_zero_iff",
+        "RelativeConicArcs.ClebschOperatorShadows.matchingEvaluation_conferenceMatrix_eq_triangleCubic",
+        "RelativeConicArcs.ClebschOperatorShadows.pfaffianSix_conferenceBracket_eq_four_triangleCubic",
+        "RelativeConicArcs.ClebschGoldenDescent.goldenCompanion_sq",
+        "RelativeConicArcs.ClebschGoldenDescent.goldenCompanion_mul_descendedCoefficient",
+        "RelativeConicArcs.ClebschGoldenDescent.conference_mul_degreeTenComparison",
+        "RelativeConicArcs.ClebschGoldenDescent.degreeTenComparison_det",
+        "RelativeConicArcs.ClebschGoldenDescent.normalizedReturnScalar",
+        "RelativeConicArcs.ClebschMiddleExterior.tripleSet_complementIndex",
+        "RelativeConicArcs.ClebschMiddleExterior.eq_complementIndex_iff",
+        "RelativeConicArcs.ClebschMiddleExterior.concatenation_bijective",
+        "RelativeConicArcs.ClebschMiddleExterior.hodgeSign_eq_neg_one_pow_inversions",
+        "RelativeConicArcs.ClebschMiddleExterior.hodgeSign_mul_complement"
+      ],
+      "excluded": "the geometric identification of the four shadows with the marked golden presentation, and the cross-golden determinant comparison, remain human arguments."
+    },
+    "OPER-3": {
+      "coverage": "partial mechanism; no full row claim",
+      "declarations": [
+        "RelativeConicArcs.ClebschGoldenConference.pairTriangleSum_eq_zero",
+        "RelativeConicArcs.ClebschGoldenConference.triangleSign_four_point",
+        "RelativeConicArcs.ConferenceCutSpectrum.signedTriangle_sq"
+      ],
+      "excluded": "the general cross-block spectrum formula, the closed-walk count, the inclusion-rank descent, the higher-order Ramsey exclusion, and the classical aligned-design consequences remain human arguments"
+    },
+    "OPER-4": {
+      "coverage": "partial mechanism; no full row claim",
+      "declarations": [
+        "RelativeConicArcs.ClebschGoldenConference.triangleSign_switch",
+        "RelativeConicArcs.ClebschTwoGraph.switch_eq_reconstructed_triangleSign",
+        "RelativeConicArcs.ClebschTwoGraph.reconstructed_triangle_root",
+        "RelativeConicArcs.ClebschTwoGraph.reconstructed_triangle_nonroot"
+      ],
+      "excluded": "the finite-set extension to seven vertices, the passage from arbitrary labels to normalized cut coordinates, and the distinctness of the anchor points remain human inputs; the aligned anchor itself is audited by the passages gate"
+    }
+  },
+  "gate_module": "RelativeConicArcs.Gates.ClebschGoldenReturn",
+  "lean_toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "schema": "clebsch-golden-return-formal-v1",
+  "source_closure_sha256": "af5358445986d75da21ad86d9f3c3c8f8d9cf4fa5d745f075049f64068a0d67d",
+  "source_sha256": {
+    "RelativeConicArcs/ClebschGoldenConference.lean": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30",
+    "RelativeConicArcs/ClebschGoldenDescent.lean": "f8582958e6c06d9b9d47e6f7fba2d77a3182ec06659d67bd171e76f78e5260ff",
+    "RelativeConicArcs/ClebschMiddleExterior.lean": "7d731595069d962814fc1552f8a4a7c0eb5759294776081ecf446a2ddace54a7",
+    "RelativeConicArcs/ClebschMiddleExteriorDiagonal.lean": "f3ae3e0a5d5571d7672cfdede38a68112e0b35a86b7af5734d3ac82c41db33f1",
+    "RelativeConicArcs/ClebschMiddleExteriorSquare.lean": "4c56ddc694d69f62b5fdf4a996ca1b8cf3ee5c7351bf8678e71fe4646c163588",
+    "RelativeConicArcs/ClebschMiddleExteriorSquareRows012To023.lean": "969ea1fbb7610e41de5269da40d468b51960573c68b761a5b4e6b3628a727c07",
+    "RelativeConicArcs/ClebschMiddleExteriorSquareRows024To045.lean": "71216c9ef4ba1ead6c97060fdd3ef4e272e5535cdcd32fffc70c68b883f4b0d6",
+    "RelativeConicArcs/ClebschMiddleExteriorSquareRows123To135.lean": "09d92024c223c8aef5a2d92045168e1e38518cc41ece0f86d285105e61411f28",
+    "RelativeConicArcs/ClebschMiddleExteriorSquareRows145To345.lean": "64034171f29a5a6edf69c86be0261da2cd8d47d389c7115941b636632fb7beda",
+    "RelativeConicArcs/ClebschMiddleExteriorSupport.lean": "8cd70df6efd666d6c537f5183f85a1c460ff25e9964d2042247bf7b90e864d39",
+    "RelativeConicArcs/ClebschOperatorShadows.lean": "5dcf33b398d8f069fd039bd2d17956e1ed81c5819e5753d00a6faba44a5bddf7",
+    "RelativeConicArcs/ClebschTwoGraph.lean": "f17562813c992c291f02e28231aab66c654e89826292fd55071818f0edcf2089",
+    "RelativeConicArcs/ConferenceCutSpectrum.lean": "681314297d88c806e640f6f8796f4d1d1a34b47178159d5cdabc53d52f68ac97",
+    "RelativeConicArcs/Gates/ClebschGoldenReturn.lean": "e0fa2b6f5a59b762ebfa35a47a3900ebc3550fb0b9a1816f212bd598f4f6e682",
+    "RelativeConicArcs/GoldenCommutatorPfaffian.lean": "10f078732363c54acdd74c69b8e6ec585da48105f3e1f687bbf78e95a3322551",
+    "RelativeConicArcs/GoldenMatchingCubics.lean": "e16a8e173049bc21afd615ecf23b3da176ce5cd1bd3b217c1872c1ec67b291a5",
+    "RelativeConicArcs/WeightedMatchingEvaluation.lean": "06ef04d1a05622f94a0e46a87f4d66e2ac5a6f355a1bad9daedcb8e4a5355e66"
+  },
   "trust_boundary": {
-    "symbolic": "Ring-general switching, four-point, balance, reconstruction, augmentation, companion, matching-evaluation, commutator-Pfaffian, and three-vertex signed-matrix square identities are kernel-checked symbolic proofs.",
-    "native": "Literal integral matrix, determinant-minor, and finite twenty-triple claims use native decision in the pinned Lean runtime.",
-    "excluded": "The manifest does not claim formal coverage of the higher-order inclusion/Ramsey exchange-rigidity argument, balanced-class classification, abstract atom recovery, the exterior-cube kernel, binary transvectants, or optional quaternion-order refinements."
-  }
+    "excluded": "The manifest does not claim formal coverage of the higher-order inclusion/Ramsey exchange-rigidity argument, balanced-class classification, abstract atom recovery, the exterior-cube kernel, binary transvectants, or optional quaternion-order refinements.",
+    "native": "No compiled evaluation is used. Every audited declaration depends only on propext, Classical.choice and Quot.sound, and several depend on strictly fewer. The finite steps are kernel decisions: the order-six conference matrix entrywise over its thirty-six index pairs and its twenty triangle signs, the middle-exterior return over its twenty rows together with its diagonal, parity criterion and common-neighbour counts, and the conference intertwining identity over its thirty-six index pairs; the degree-ten comparison determinant falls to cofactor expansion instead. Middle-degree Hodge complementation squaring to minus the identity is not a decision at all: the matrix has one nonzero entry per row, so the product collapses to a single term whose sign is hodgeSign_mul_complement, and that sign identity is a parity computation. The complementation table is proved to be set complement on the underlying three-element subsets and to be characterized by that property; the sign table is proved to be minus one to the inversion count of the map concatenating a triple with its increasing complement, that map is proved to be a permutation, and minus one to an inversion count is a permutation sign by the standard inversion formula, though no comparison with a library permutation-sign function is formalized. The inversion count is the label sum less three and complementary label sums are fifteen, so the product of the two signs is (-1)^17. Those four statements about the tables are themselves kernel decisions over the twenty labels, together with two over the four hundred ordered pairs of labels and the seven hundred and twenty label-position-pair triples. The replay refuses compiled evaluation anywhere in the pinned closure and refuses any external import outside Mathlib.",
+    "symbolic": "Ring-general switching, four-point, balance, reconstruction, augmentation, companion, matching-evaluation, commutator-Pfaffian, and three-vertex signed-matrix square identities are kernel-checked symbolic proofs."
+  },
+  "verifier_sha256": "e1959986c36b7bbebda8042f7a7f5d78719f586712fcea3d80a8820c7fe57230"
 }

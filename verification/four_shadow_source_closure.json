@@ -1,0 +1,64 @@
+{
+  "external_imports": [
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Matrix.Basic",
+    "Mathlib.Data.Matrix.Mul",
+    "Mathlib.LinearAlgebra.Matrix.Notation",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring"
+  ],
+  "module_count": 7,
+  "roots": [
+    "RelativeConicArcs.Gates.FourShadowRecognition"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 17856,
+      "module": "RelativeConicArcs.ClebschGoldenConference",
+      "path": "RelativeConicArcs/ClebschGoldenConference.lean",
+      "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
+    },
+    {
+      "bytes": 1872,
+      "module": "RelativeConicArcs.ClebschOperatorShadows",
+      "path": "RelativeConicArcs/ClebschOperatorShadows.lean",
+      "sha256": "5dcf33b398d8f069fd039bd2d17956e1ed81c5819e5753d00a6faba44a5bddf7"
+    },
+    {
+      "bytes": 50643,
+      "module": "RelativeConicArcs.FourShadowRecognition",
+      "path": "RelativeConicArcs/FourShadowRecognition.lean",
+      "sha256": "7d9e8f90ccbc73ddd34e6dbfcd5788bdcb84f4b1d8f17ccb78f599f1fe0caa92"
+    },
+    {
+      "bytes": 3030,
+      "module": "RelativeConicArcs.Gates.FourShadowRecognition",
+      "path": "RelativeConicArcs/Gates/FourShadowRecognition.lean",
+      "sha256": "c479c3a253d210ba5439e7d2843a7e1308bf4b8d3e9a11a6374ba47b5477aa85"
+    },
+    {
+      "bytes": 5030,
+      "module": "RelativeConicArcs.GoldenCommutatorPfaffian",
+      "path": "RelativeConicArcs/GoldenCommutatorPfaffian.lean",
+      "sha256": "10f078732363c54acdd74c69b8e6ec585da48105f3e1f687bbf78e95a3322551"
+    },
+    {
+      "bytes": 3566,
+      "module": "RelativeConicArcs.GoldenMatchingCubics",
+      "path": "RelativeConicArcs/GoldenMatchingCubics.lean",
+      "sha256": "e16a8e173049bc21afd615ecf23b3da176ce5cd1bd3b217c1872c1ec67b291a5"
+    },
+    {
+      "bytes": 4119,
+      "module": "RelativeConicArcs.WeightedMatchingEvaluation",
+      "path": "RelativeConicArcs/WeightedMatchingEvaluation.lean",
+      "sha256": "06ef04d1a05622f94a0e46a87f4d66e2ac5a6f355a1bad9daedcb8e4a5355e66"
+    }
+  ]
+}

@@ -13,6 +13,8 @@ PAPER = Path(__file__).resolve().parents[1]
 MAIN = PAPER / "clebsch_passages.tex"
 MANIFEST = PAPER / "verification" / "trust_manifest.json"
 IDENTITY = PAPER / "verification" / "statement_identity.json"
+GOLDEN_FORMAL = PAPER / "verification" / "golden_return_formal.json"
+FOUR_SHADOW_FORMAL = PAPER / "verification" / "four_shadow_formal.json"
 
 ALLOWED_STATUSES = {
     "proven",
@@ -122,19 +124,76 @@ def main() -> None:
     formal_map_path = PAPER / formal_coverage.get("map", "")
     require(formal_map_path.is_file(), "formal declaration map is missing")
     formal_map = json.loads(formal_map_path.read_text(encoding="utf-8"))
+    golden_map = json.loads(GOLDEN_FORMAL.read_text(encoding="utf-8"))
     require(
         set(formal_map.get("claim_map", {})) == {claim["id"] for claim in claims},
         "formal declaration map does not cover exactly the manuscript rows",
     )
-    require(
-        all(
+    main_audit = set(formal_map.get("audited_declarations", []))
+    supplemental_audit = set(golden_map.get("audited_declarations", []))
+    for claim_id, row in formal_map["claim_map"].items():
+        declarations = set(row.get("declarations", []))
+        supplemental = set(row.get("supplemental_declarations", []))
+        require(
             row.get("coverage") == "partial mechanism; no full row claim"
-            and bool(row.get("declarations"))
-            and bool(row.get("excluded"))
-            for row in formal_map["claim_map"].values()
-        ),
-        "formal row boundary is incomplete",
-    )
+            and bool(declarations or supplemental)
+            and bool(row.get("excluded")),
+            f"formal row boundary is incomplete for {claim_id}",
+        )
+        require(
+            declarations <= main_audit,
+            f"main-gate declaration mismatch for {claim_id}",
+        )
+        require(
+            declarations.isdisjoint(supplemental),
+            f"declaration assigned to two gates for {claim_id}",
+        )
+        if supplemental:
+            require(
+                row.get("supplemental_gate") == golden_map.get("gate_module"),
+                f"supplemental gate mismatch for {claim_id}",
+            )
+            require(
+                supplemental <= supplemental_audit,
+                f"supplemental declaration mismatch for {claim_id}",
+            )
+        else:
+            require(
+                "supplemental_gate" not in row,
+                f"empty supplemental gate for {claim_id}",
+            )
+    # Every released gate must map every terminal it audits to a claim row, and
+    # must pin a tracked build log for its axiom report: a shipped artifact with
+    # no stated correspondence and no replayable provenance is not evidence.
+    four_shadow_map = json.loads(FOUR_SHADOW_FORMAL.read_text(encoding="utf-8"))
+    for label, gate_map in (
+        ("passages", formal_map),
+        ("golden-return", golden_map),
+        ("four-shadow", four_shadow_map),
+    ):
+        audited = set(gate_map.get("audited_declarations", []))
+        mapped = {
+            declaration
+            for row in gate_map.get("claim_map", {}).values()
+            for key in ("declarations", "supplemental_declarations")
+            for declaration in row.get(key, [])
+        }
+        require(
+            bool(gate_map.get("claim_map")),
+            f"{label} gate has no claim map",
+        )
+        require(
+            audited <= mapped,
+            f"{label} gate audits declarations no claim row names",
+        )
+        provenance = gate_map.get("axiom_report_provenance", {})
+        require(
+            bool(provenance.get("gate_stdout"))
+            and (PAPER / provenance.get("gate_stdout", "")).is_file()
+            and bool(provenance.get("gate_stdout_sha256")),
+            f"{label} gate axiom report has no tracked provenance",
+        )
+
     require(bool(manifest.get("local_release_ready")),
             "local release gate is not ready")
     require(manifest.get("submission_ready") is False,

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import subprocess
 import json
 import re
@@ -96,7 +97,49 @@ def check_public_vocabulary() -> None:
     print("clebsch-passages release: PASS [public vocabulary]")
 
 
+def check_lean_gates(lean_root: Path | None) -> None:
+    """Replay the three import-only Lean gates against their pinned sources.
+
+    Without a Lean tree the pinned closures cannot be hashed, so the gates are
+    reported as unchecked by name rather than silently passed over: a release
+    run that cannot reach the Lean sources has verified strictly less than one
+    that can.
+    """
+    verifiers = (
+        ("passages", "verify_passages_lean.py"),
+        ("golden return", "verify_golden_return_lean.py"),
+        ("four shadow", "verify_four_shadow_lean.py"),
+    )
+    if lean_root is None:
+        names = ", ".join(name for name, _ in verifiers)
+        print(
+            "clebsch-passages release: UNCHECKED [Lean gates: "
+            f"{names}] pass --lean-root to replay them"
+        )
+        return False
+    for name, script in verifiers:
+        run(
+            f"{name} Lean gate",
+            [
+                "python3",
+                f"verification/{script}",
+                "--lean-root",
+                str(lean_root),
+                "--source-only",
+            ],
+            PAPER,
+        )
+    return True
+
+
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--lean-root",
+        type=Path,
+        help="Lean tree holding the pinned gate closures",
+    )
+    args = parser.parse_args()
     check_release_files()
     check_public_vocabulary()
     run(
@@ -107,6 +150,15 @@ def main() -> int:
     run(
         "trust manifest",
         ["python3", "verification/verify_scaffold.py"],
+        PAPER,
+    )
+    # The companion pin, its flake input and its lock must agree.  This runs without
+    # --lean-root: the deeper check resolves the pinned finitegeom tree, which is a
+    # different repository from the Lean root this verifier is given.  Checking the
+    # three against each other is what keeps the pin from drifting unnoticed.
+    run(
+        "formal companion pin",
+        ["python3", "verification/verify_formal_companion.py"],
         PAPER,
     )
 
@@ -138,9 +190,19 @@ def main() -> int:
         if not evidence.is_dir():
             raise SystemExit("clebsch-passages release: FAIL [missing evidence directory]")
 
+    lean_checked = check_lean_gates(
+        args.lean_root.resolve() if args.lean_root else None
+    )
+
     run("manuscript build", ["make", "-B"], PAPER)
     check_latex_log()
-    print("clebsch-passages release: ALL CHECKS PASS")
+    if lean_checked:
+        print("clebsch-passages release: ALL CHECKS PASS")
+    else:
+        print(
+            "clebsch-passages release: ALL CHECKS PASS EXCEPT THE LEAN GATES "
+            "(rerun with --lean-root for a complete release check)"
+        )
     return 0
 
 

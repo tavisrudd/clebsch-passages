@@ -1,0 +1,124 @@
+{
+  "external_imports": [
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Matrix.Basic",
+    "Mathlib.Data.Matrix.Mul",
+    "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+    "Mathlib.LinearAlgebra.Matrix.Notation",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.NormNum.NatFactorial",
+    "Mathlib.Tactic.Ring"
+  ],
+  "module_count": 17,
+  "roots": [
+    "RelativeConicArcs.Gates.ClebschGoldenReturn"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 17856,
+      "module": "RelativeConicArcs.ClebschGoldenConference",
+      "path": "RelativeConicArcs/ClebschGoldenConference.lean",
+      "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
+    },
+    {
+      "bytes": 3396,
+      "module": "RelativeConicArcs.ClebschGoldenDescent",
+      "path": "RelativeConicArcs/ClebschGoldenDescent.lean",
+      "sha256": "f8582958e6c06d9b9d47e6f7fba2d77a3182ec06659d67bd171e76f78e5260ff"
+    },
+    {
+      "bytes": 11641,
+      "module": "RelativeConicArcs.ClebschMiddleExterior",
+      "path": "RelativeConicArcs/ClebschMiddleExterior.lean",
+      "sha256": "7d731595069d962814fc1552f8a4a7c0eb5759294776081ecf446a2ddace54a7"
+    },
+    {
+      "bytes": 1881,
+      "module": "RelativeConicArcs.ClebschMiddleExteriorDiagonal",
+      "path": "RelativeConicArcs/ClebschMiddleExteriorDiagonal.lean",
+      "sha256": "f3ae3e0a5d5571d7672cfdede38a68112e0b35a86b7af5734d3ac82c41db33f1"
+    },
+    {
+      "bytes": 2880,
+      "module": "RelativeConicArcs.ClebschMiddleExteriorSquare",
+      "path": "RelativeConicArcs/ClebschMiddleExteriorSquare.lean",
+      "sha256": "4c56ddc694d69f62b5fdf4a996ca1b8cf3ee5c7351bf8678e71fe4646c163588"
+    },
+    {
+      "bytes": 1673,
+      "module": "RelativeConicArcs.ClebschMiddleExteriorSquareRows012To023",
+      "path": "RelativeConicArcs/ClebschMiddleExteriorSquareRows012To023.lean",
+      "sha256": "969ea1fbb7610e41de5269da40d468b51960573c68b761a5b4e6b3628a727c07"
+    },
+    {
+      "bytes": 1673,
+      "module": "RelativeConicArcs.ClebschMiddleExteriorSquareRows024To045",
+      "path": "RelativeConicArcs/ClebschMiddleExteriorSquareRows024To045.lean",
+      "sha256": "71216c9ef4ba1ead6c97060fdd3ef4e272e5535cdcd32fffc70c68b883f4b0d6"
+    },
+    {
+      "bytes": 1683,
+      "module": "RelativeConicArcs.ClebschMiddleExteriorSquareRows123To135",
+      "path": "RelativeConicArcs/ClebschMiddleExteriorSquareRows123To135.lean",
+      "sha256": "09d92024c223c8aef5a2d92045168e1e38518cc41ece0f86d285105e61411f28"
+    },
+    {
+      "bytes": 1683,
+      "module": "RelativeConicArcs.ClebschMiddleExteriorSquareRows145To345",
+      "path": "RelativeConicArcs/ClebschMiddleExteriorSquareRows145To345.lean",
+      "sha256": "64034171f29a5a6edf69c86be0261da2cd8d47d389c7115941b636632fb7beda"
+    },
+    {
+      "bytes": 1433,
+      "module": "RelativeConicArcs.ClebschMiddleExteriorSupport",
+      "path": "RelativeConicArcs/ClebschMiddleExteriorSupport.lean",
+      "sha256": "8cd70df6efd666d6c537f5183f85a1c460ff25e9964d2042247bf7b90e864d39"
+    },
+    {
+      "bytes": 1872,
+      "module": "RelativeConicArcs.ClebschOperatorShadows",
+      "path": "RelativeConicArcs/ClebschOperatorShadows.lean",
+      "sha256": "5dcf33b398d8f069fd039bd2d17956e1ed81c5819e5753d00a6faba44a5bddf7"
+    },
+    {
+      "bytes": 4738,
+      "module": "RelativeConicArcs.ClebschTwoGraph",
+      "path": "RelativeConicArcs/ClebschTwoGraph.lean",
+      "sha256": "f17562813c992c291f02e28231aab66c654e89826292fd55071818f0edcf2089"
+    },
+    {
+      "bytes": 1716,
+      "module": "RelativeConicArcs.ConferenceCutSpectrum",
+      "path": "RelativeConicArcs/ConferenceCutSpectrum.lean",
+      "sha256": "681314297d88c806e640f6f8796f4d1d1a34b47178159d5cdabc53d52f68ac97"
+    },
+    {
+      "bytes": 6297,
+      "module": "RelativeConicArcs.Gates.ClebschGoldenReturn",
+      "path": "RelativeConicArcs/Gates/ClebschGoldenReturn.lean",
+      "sha256": "e0fa2b6f5a59b762ebfa35a47a3900ebc3550fb0b9a1816f212bd598f4f6e682"
+    },
+    {
+      "bytes": 5030,
+      "module": "RelativeConicArcs.GoldenCommutatorPfaffian",
+      "path": "RelativeConicArcs/GoldenCommutatorPfaffian.lean",
+      "sha256": "10f078732363c54acdd74c69b8e6ec585da48105f3e1f687bbf78e95a3322551"
+    },
+    {
+      "bytes": 3566,
+      "module": "RelativeConicArcs.GoldenMatchingCubics",
+      "path": "RelativeConicArcs/GoldenMatchingCubics.lean",
+      "sha256": "e16a8e173049bc21afd615ecf23b3da176ce5cd1bd3b217c1872c1ec67b291a5"
+    },
+    {
+      "bytes": 4119,
+      "module": "RelativeConicArcs.WeightedMatchingEvaluation",
+      "path": "RelativeConicArcs/WeightedMatchingEvaluation.lean",
+      "sha256": "06ef04d1a05622f94a0e46a87f4d66e2ac5a6f355a1bad9daedcb8e4a5355e66"
+    }
+  ]
+}

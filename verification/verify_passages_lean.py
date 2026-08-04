@@ -7,13 +7,13 @@ import argparse
 import hashlib
 import json
 import re
-import subprocess
 from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
 MANIFEST = HERE / "passages_formal.json"
 AXIOM_REPORT = HERE / "passages_axioms.txt"
+CLOSURE_INVENTORY = HERE / "passages_source_closure.json"
 
 
 def sha256(path: Path) -> str:
@@ -52,9 +52,77 @@ def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
         raise SystemExit(f"passages formal replay: FAIL [toolchain {toolchain!r}]")
     if sha256(AXIOM_REPORT) != manifest["axiom_report_sha256"]:
         raise SystemExit("passages formal replay: FAIL [axiom report hash]")
+    if sha256(Path(__file__).resolve()) != manifest["verifier_sha256"]:
+        raise SystemExit("passages formal replay: FAIL [verifier hash]")
+    if sha256(CLOSURE_INVENTORY) != manifest["source_closure_sha256"]:
+        raise SystemExit("passages formal replay: FAIL [source closure hash]")
 
-    forbidden = re.compile(r"^\s*(?:axiom|unsafe\s+(?:def|theorem))\b", re.MULTILINE)
+    provenance = manifest.get("axiom_report_provenance")
+    if provenance is not None:
+        # The tracked gate stdout is what makes the axiom report replayable by
+        # someone other than its author, so its bytes are pinned like any other
+        # input rather than merely referenced.
+        log = HERE.parent / provenance["gate_stdout"]
+        if not log.is_file():
+            raise SystemExit(
+                "passages formal replay: FAIL [missing gate stdout "
+                f"{provenance['gate_stdout']}]"
+            )
+        if sha256(log) != provenance["gate_stdout_sha256"]:
+            raise SystemExit("passages formal replay: FAIL [gate stdout hash]")
+
+    inventory = json.loads(CLOSURE_INVENTORY.read_text(encoding="utf-8"))
+    if inventory.get("roots") != [manifest["gate_module"]]:
+        raise SystemExit("passages formal replay: FAIL [source closure root]")
+    observed_sources = {
+        item["path"]: item["sha256"] for item in inventory.get("sources", [])
+    }
+    if observed_sources != manifest["source_sha256"]:
+        raise SystemExit("passages formal replay: FAIL [source closure inventory]")
+
+    # A declaration keyword may be preceded by attributes and by any number of
+    # modifiers, so anchoring on the bare keyword at line start is not a check:
+    # `private axiom` walks straight past it.
+    modifiers = (
+        r"(?:@\[[^\]]*\]\s*|(?:private|protected|noncomputable|nonrec|scoped|local)\s+)*"
+    )
+    # The closure walk follows only project-local imports, so an import into
+    # another package would leave a proof this replay never sees.  Confine the
+    # externals to Mathlib, which the toolchain pin already fixes.
+    for external in inventory.get("external_imports", []):
+        if external != "Mathlib" and not external.startswith("Mathlib."):
+            raise SystemExit(
+                "passages formal replay: FAIL [external import outside Mathlib: "
+                f"{external}]"
+            )
+
+    forbidden = re.compile(
+        rf"^\s*{modifiers}(?:axiom|opaque|partial|unsafe)\b", re.MULTILINE
+    )
+    # Mechanisms that would move a proof outside the kernel without introducing
+    # an axiom the gate's `#print axioms` lines would show.  `set_option` is
+    # covered because `debug.skipKernelTC` disables kernel typechecking outright
+    # and leaves no trace in `#print axioms`.  This gate's closure no longer
+    # uses compiled evaluation anywhere, so `native_decide` is refused outright
+    # rather than declared as a trust boundary.
+    mechanisms = re.compile(
+        r"\bnative_decide\b"
+        r"|\bdecide\b[^\n]*\+\s*native"
+        r"|\bnative\s*:=\s*true"
+        r"|(?:@\[|attribute\s*\[)[^\]]*(?:implemented_by|extern)"
+        r"|\bofReduceBool\b"
+        r"|\bset_option\s+(?:debug\.skipKernelTC|allowUnsafeReducibility"
+        r"|debug\.byAsSorry|debug\.proofAsSorry"
+        r"|debug\.terminalTacticsAsSorry)",
+        re.MULTILINE,
+    )
     workflow_id = re.compile(r"\bC[0-9]{3,}\b")
+    # Workflow debris, not ordinary English: `pending`, `temporary` and
+    # `fallback` are all plausible words in a mathematical docstring and were
+    # refusing sources for no reason.
+    workflow_prose = re.compile(
+        r"\b(?:TODO|FIXME|XXX|HACK)\b",
+    )
     for relative, expected in manifest["source_sha256"].items():
         source = lean_root / relative
         if not source.is_file():
@@ -62,39 +130,20 @@ def check_sources(lean_root: Path, manifest: dict[str, object]) -> None:
         if sha256(source) != expected:
             raise SystemExit(f"passages formal replay: FAIL [hash {relative}]")
         text = source.read_text(encoding="utf-8")
-        if "sorry" in text or forbidden.search(text) or workflow_id.search(text):
+        if (
+            "sorry" in text
+            or forbidden.search(text)
+            or mechanisms.search(text)
+            or workflow_id.search(text)
+            or workflow_prose.search(text)
+        ):
             raise SystemExit(f"passages formal replay: FAIL [source policy {relative}]")
     print("passages formal replay: PASS [pinned sources and toolchain]")
 
 
-def run_gate(lean_root: Path, manifest: dict[str, object]) -> None:
-    gate = manifest["gate_module"]
-    build = subprocess.run(
-        ["nix", "develop", "--command", "lake", "build", gate],
-        cwd=lean_root,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        check=False,
-    )
-    if build.returncode:
-        tail = "\n".join(build.stdout.splitlines()[-12:])
-        raise SystemExit(f"passages formal replay: FAIL [build]\n{tail}")
-
-    gate_path = Path(*gate.split(".")).with_suffix(".lean")
-    audit = subprocess.run(
-        ["nix", "develop", "--command", "lake", "env", "lean", str(gate_path)],
-        cwd=lean_root,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        check=False,
-    )
-    if audit.returncode:
-        tail = "\n".join(audit.stdout.splitlines()[-12:])
-        raise SystemExit(f"passages formal replay: FAIL [axiom audit]\n{tail}")
+def check_axiom_log(manifest: dict[str, object], axiom_log: Path) -> None:
     expected = parse_axioms(AXIOM_REPORT.read_text(encoding="utf-8"))
-    observed = parse_axioms(audit.stdout)
+    observed = parse_axioms(axiom_log.read_text(encoding="utf-8"))
     declarations = set(manifest["audited_declarations"])
     if set(expected) != declarations:
         raise SystemExit(
@@ -102,23 +151,29 @@ def run_gate(lean_root: Path, manifest: dict[str, object]) -> None:
         )
     if observed != expected:
         raise SystemExit("passages formal replay: FAIL [axiom report mismatch]")
-    print("passages formal replay: PASS [gate and axiom audit]")
+    print("passages formal replay: PASS [pinned sources and supplied axiom audit]")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--lean-root", type=Path, required=True)
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument(
         "--source-only",
         action="store_true",
-        help="check pinned sources and toolchain without invoking Lean",
+        help="check the pinned transitive source closure without a live gate",
+    )
+    mode.add_argument(
+        "--axiom-log",
+        type=Path,
+        help="stdout from a guarded elaboration of the import-only gate",
     )
     args = parser.parse_args()
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     lean_root = args.lean_root.resolve()
     check_sources(lean_root, manifest)
-    if not args.source_only:
-        run_gate(lean_root, manifest)
+    if args.axiom_log is not None:
+        check_axiom_log(manifest, args.axiom_log.resolve())
     return 0
 
 
