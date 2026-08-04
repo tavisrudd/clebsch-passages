@@ -75,7 +75,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "ef33661e0afcc58b33f02e59ef2130af360c9c12f9762c51355b46bc4c99ae3b",
+      "sha256": "739760dd66b753e68b5b7e013a442e3bf210a1fd73d85b18de6a0bf5b4c60abd",
       "source_blob": null
     },
     {
@@ -106,22 +106,22 @@
       "source_blob": "f20b9686ec6d3ba06421ff20a5d3062570568fdc"
     },
     {
-      "bytes": 1580,
+      "bytes": 567,
       "mode": "100644",
       "path": "flake.lock",
       "rewrites": [],
       "role": "support",
-      "sha256": "c272c8b7909aeb3929144b029778bcfd52f13648a5dbb96675a1be09be9936fa",
-      "source_blob": "b99415f439508c9112655427b73a54e8e46ce77b"
+      "sha256": "9ae203c10f2e27ff1a11363a02ac43747d9766f8f17c975b5d825ed480d120cc",
+      "source_blob": "c06115a1e8e270fb2772ce0ef216d75ab95e492f"
     },
     {
-      "bytes": 1289,
+      "bytes": 688,
       "mode": "100644",
       "path": "flake.nix",
       "rewrites": [],
       "role": "support",
-      "sha256": "07a6899ccf9e7875d413e8de6a0b23a07d18302158861050b673f77fdfaf7a52",
-      "source_blob": "cf56d9c44fe97caa856bc510742a136805039a0a"
+      "sha256": "11e96dff57ee17f0e9621164b9ce86d08a0faf4de57ca2948f5153a02c9aaeeb",
+      "source_blob": "a43e51e7a46b4f0bb4b0f6868e0ba51a49c2a24c"
     },
     {
       "bytes": 6747,
@@ -518,13 +518,13 @@
       "source_blob": "c5b65998bd21b64f3040485c5d9d94c2e8f10247"
     },
     {
-      "bytes": 3569,
+      "bytes": 3592,
       "mode": "100644",
       "path": "verification/verify_formal_companion.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "8c17e3d8d7c534f0d9095b0edbc33455bb4ca4f3e3bf2090633747b3d6b8a46c",
-      "source_blob": "198ba0575307d26483e01e466b08f5059290a470"
+      "sha256": "3968a50fc84f5df3e9ede7ad2c393dd5ea3ee17ce02ce3a13e5daa794df3ceea",
+      "source_blob": "4becaf933bc62b60abfc0958e0b47bbb7dc0096f"
     },
     {
       "bytes": 7226,
@@ -554,13 +554,13 @@
       "source_blob": "6c5c23636799e49f72e81418d151dae79176688b"
     },
     {
-      "bytes": 6838,
+      "bytes": 6841,
       "mode": "100644",
       "path": "verification/verify_release.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "411962d28451905b3a848a8e111e117e01cae255f5714c6f5146d5ee31da3746",
-      "source_blob": "c2aa7e6521f80fd615bee6b6b55da446fa890e81"
+      "sha256": "30d37282ed0c65c988569ac1f36eb4edd10059a6d29509494231393678d13490",
+      "source_blob": "6a4b6cebc3c435360bc7123ccd53994265ab3901"
     },
     {
       "bytes": 8577,
@@ -585,5 +585,5 @@
   "repository": "clebsch-passages",
   "repository_map_sha256": "cefc87eca06986ec4a613c1b6ff3652e099c8779cfb9dcba178d81bac91ce8dd",
   "schema_version": 1,
-  "source_commit": "f3f6505667892cc98ba29d3a08a357bd0dcc237d"
+  "source_commit": "bfa152ce128d23d6de81b797ac72fb032c5bb10e"
 }
