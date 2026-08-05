@@ -75,35 +75,35 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "bc17184a8d81f56f4b3e10a9d7752e9d56f56a9e771cb8436eafcd0a2954dab7",
+      "sha256": "dcffcdf7ef3e91e9788fd516faca2a113d89ca602c7342dad3ab778223ad98e5",
       "source_blob": null
     },
     {
-      "bytes": 2301,
+      "bytes": 2861,
       "mode": "100644",
       "path": "README.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "3447ff99db987c9f20ad5938debde795c0c270f18aa58da0f4ca93043df0ed51",
-      "source_blob": "76edecdcf6828c8a96cc73b93886bfff9118a3c9"
+      "sha256": "8069dda159c8aba076b66ac9437462cba84b23ccfffcab73cb19593e4644f0d0",
+      "source_blob": "479cf4de4a4d834c578a894409878c8106c60835"
     },
     {
-      "bytes": 210013,
+      "bytes": 217298,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "a9c7d9615d19f436ecd860daea6631171396c65390bbf3b78377ac3535e47df9",
-      "source_blob": "4655cee642e77f81b36822a02d1a510216dc8322"
+      "sha256": "780e6235fa8dcc53e31901682200664b5e97d2bf00846fa167c0ea1aa5157995",
+      "source_blob": "66800adc04a40ee998913bdeead1a00318556580"
     },
     {
-      "bytes": 4000,
+      "bytes": 4788,
       "mode": "100644",
       "path": "clebsch_passages.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "bccb0327be9ccddaed2941c107755cf349ec390ffaed3df841bcd596ec934d2e",
-      "source_blob": "f20b9686ec6d3ba06421ff20a5d3062570568fdc"
+      "sha256": "1a8e205be4dfaf368c9fcc4910da791018cd57cc2d2fa9bce0bc7be922638da7",
+      "source_blob": "239134d822c2a2a02086772b3cefa2d77d1bdd84"
     },
     {
       "bytes": 567,
@@ -151,13 +151,13 @@
       "source_blob": "0b1d1880afea1e7be681998791c64b9d4138c995"
     },
     {
-      "bytes": 13242,
+      "bytes": 15253,
       "mode": "100644",
       "path": "sections/02-orientation-cover.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "34328aed7d067a8f43efb7875769410e66fe02679fad391a23beb9996adb366b",
-      "source_blob": "98c0f643867fc7c02f70301262938686d984804f"
+      "sha256": "b2a8989dbee1d36ef25f9ab9596388b01b92229d6f50b6675e82aac680e88d5b",
+      "source_blob": "c02667e4d0a06e0c56638060b3924437f5cf4ff0"
     },
     {
       "bytes": 6143,
@@ -178,22 +178,22 @@
       "source_blob": "bc34601ec4c580332d336332d7dda1553a12aa73"
     },
     {
-      "bytes": 25395,
+      "bytes": 28376,
       "mode": "100644",
       "path": "sections/05-golden-operator.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "d0abe9b625bf310bc5c09117441ed16f90d88b2bb52b7ebffb539fcf66e4775a",
-      "source_blob": "f843b394c8ac63330cbe139bbd9c53e3e1e50e04"
+      "sha256": "3271f94c27a1db520f84f912f8409ed2b8709b991ab8b2f30a49141083bf398a",
+      "source_blob": "2aaf5aef9662188bd40919170ece5f946e2c18fd"
     },
     {
-      "bytes": 8605,
+      "bytes": 8933,
       "mode": "100644",
       "path": "sections/05-harmonic-realization.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "278565585415fd1e8a8d73e13536b6a5583c3b5cb19e5b0ed8e213cbb7f53fc3",
-      "source_blob": "c37bb5672576533e87675a5ce8787397a82b65d4"
+      "sha256": "f019d20c504ddd04b670abc39e69fd9790cf351af4419c138efb9967fcba04a1",
+      "source_blob": "a25556f82c1e5b3893248d32faaf4d90ea352675"
     },
     {
       "bytes": 2055,
@@ -205,31 +205,31 @@
       "source_blob": "dd496a414efc6a113a8c747f7d221e914b0353e3"
     },
     {
-      "bytes": 5036,
+      "bytes": 5781,
       "mode": "100644",
       "path": "sections/08-verification.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "4b0726df5657f81c68a972c31c83547b0c705c365ddb9492c06667c9e944eb6e",
-      "source_blob": "272a96c04a8bee703f3193715ac50fdfd90d9f28"
+      "sha256": "56fdfa8a3904d8a948d5038eb199b4234c95c34cd37edd42d60aa1e68d3e8a77",
+      "source_blob": "229c469c56a6ec46909ec343e6fda459decb38fe"
     },
     {
-      "bytes": 3102,
+      "bytes": 3291,
       "mode": "100644",
       "path": "sections/09-conclusion.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "0c3cb0fed30d0a69b7d5f1a1564b8199903b512f0f68c04ead171c0e1b6d549b",
-      "source_blob": "249001dd4e35fe17f24197d867bd7d2ffaeb287c"
+      "sha256": "2ce7f1b81acfb72ae20dfa3afede006e09e268c410d4796ec940acb6a2533146",
+      "source_blob": "c095da5b6ce6dccbee56a25ca233ebe43dd2acf8"
     },
     {
-      "bytes": 5658,
+      "bytes": 5865,
       "mode": "100644",
       "path": "sections/10-references.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "adfe54289d4f19789f41b0ca9de828541a06f5a9fb7cea4dab55289997d4d892",
-      "source_blob": "e1a01adac726e9ad24a08c62c9675f1e6363e507"
+      "sha256": "cb9d9894d2e256e3ecd507ee3651b294bf20051329450c3f9266464b99084755",
+      "source_blob": "1648a42781270050c011d8d9101f8ea919bbad9b"
     },
     {
       "bytes": 7782,
@@ -253,8 +253,8 @@
       "path": "verification/check_manuscript_build.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "e25898448df7bdf24b7eb319822725a278f7debb2685cc629847f31021144013",
-      "source_blob": "a8865670897e04b241bd943e7141b4cc494458b2"
+      "sha256": "4c75313b7714b00a87ebdb8e4ddf8d7731abcaefe46eecb55ab3cae85fc5d731",
+      "source_blob": "47f8b5dd6971292d624a073469f94b994e8374f7"
     },
     {
       "bytes": 1151,
@@ -293,13 +293,13 @@
       "source_blob": "07264f3a124bc186567e0d0152df0d33a629e0fc"
     },
     {
-      "bytes": 4001,
+      "bytes": 8522,
       "mode": "100644",
       "path": "verification/evidence/gate_stdout/four_shadow.stdout.txt",
       "rewrites": [],
       "role": "verification",
-      "sha256": "027b009020d0c2b5e04bd35080618c05d8d2c4981565c7798eddd80256657feb",
-      "source_blob": "18fbab05bd8aa348665d611353f9fc1c81692356"
+      "sha256": "be3b7a21c8fe7c07673a8e73d815f0c2df042b0a7319c006e1d1b21d89ed87f7",
+      "source_blob": "03a030abb5b32a077073ea9885010fe40971c076"
     },
     {
       "bytes": 6852,
@@ -311,13 +311,13 @@
       "source_blob": "4f78c2ad8d529d65651ec3da82be55e9d5a031f3"
     },
     {
-      "bytes": 8901,
+      "bytes": 9920,
       "mode": "100644",
       "path": "verification/evidence/gate_stdout/passages.stdout.txt",
       "rewrites": [],
       "role": "verification",
-      "sha256": "891b3a69a760d2641d21118bda0cd5ea9a14f0115ccafd6bb28f3b5745991fc0",
-      "source_blob": "e09a92a631a7e204cee80f0631c50ec7851fa4d9"
+      "sha256": "335daca395d70b2dacff0ce5f6c52fdb21837ccfe5cf530c272dff287e49b583",
+      "source_blob": "4a3d0a1ab870955058246d09ab85d52185a05468"
     },
     {
       "bytes": 13406,
@@ -428,31 +428,31 @@
       "source_blob": "85b183deedadb4d55cb92668bd90d50f0d2a3149"
     },
     {
-      "bytes": 2587,
+      "bytes": 5630,
       "mode": "100644",
       "path": "verification/four_shadow_axioms.txt",
       "rewrites": [],
       "role": "verification",
-      "sha256": "d7f554bf8e60a9542b8cb8abff7ac195b46b7ef97d1fdcee2516bcd831d57ffa",
-      "source_blob": "f622b98ffab9d5e60827715693de4bd229d93b7b"
+      "sha256": "bc4b285d578a35db78a82c3d06475f6e458ca6b051f0fffd5f04cb13fd35d66f",
+      "source_blob": "f506e14a694be4ee84a8e70fe10d1f5dc9c008be"
     },
     {
-      "bytes": 7171,
+      "bytes": 12910,
       "mode": "100644",
       "path": "verification/four_shadow_formal.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "3bcf80266d74f0a961bd6cabcd6985d024dee617731cecacd4cecb2959830365",
-      "source_blob": "3fe3271bcb7e55742aea7896becfcc6445a897b2"
+      "sha256": "ebf18a2722ed5af81b08ea6763dd1aa500d5dcac9625df9708fb92734f13d9f6",
+      "source_blob": "81affcd4e0c74f44bb67664c784d9432f73f0f09"
     },
     {
-      "bytes": 2256,
+      "bytes": 2482,
       "mode": "100644",
       "path": "verification/four_shadow_source_closure.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "e77d572b7400fff6e1f98cc0a5fb58bccc0ab9a1ea5ee2f4a0761c923c1b67d0",
-      "source_blob": "e0b8d26e84905699398535d6fbb0316954df3b60"
+      "sha256": "0bc2d611777ae8edc7236f70f59d5b86f016dbb9dc19c4b6b8816a92a7bb1ae5",
+      "source_blob": "bbc110d2aa5983f690cc23365357447988a5f22c"
     },
     {
       "bytes": 4040,
@@ -482,49 +482,49 @@
       "source_blob": "e9407c3d8e5ad9a70d121a7caf1a48b87423ae15"
     },
     {
-      "bytes": 5894,
+      "bytes": 6570,
       "mode": "100644",
       "path": "verification/passages_axioms.txt",
       "rewrites": [],
       "role": "verification",
-      "sha256": "9cff40588cda8f5e282ce3fd498553cfb114a693375608dd1453256db0b2b475",
-      "source_blob": "32c4fd62ebc8f017e1df90b30058a9d15d65f0ef"
+      "sha256": "04b975fa9eec7537fecf044935ae29831b0204d88ad61935c9609b82f26a5ba4",
+      "source_blob": "77152abc9be5e3b1c4a13a0e16f6d7c97245aaad"
     },
     {
-      "bytes": 15511,
+      "bytes": 17101,
       "mode": "100644",
       "path": "verification/passages_formal.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "650d4e263f44b1f0022856822c6492895028d742898e780dca96f1de28cb9720",
-      "source_blob": "4329c2848de1c59874766c3b85e6a8d1b46c6119"
+      "sha256": "98cf47c1fd0e88b0d07d86c930452015d253a081819add74d1e9e04954d2beaa",
+      "source_blob": "5c01e819a66aa301b8c10c6a8cfc2874ef2f5ca1"
     },
     {
-      "bytes": 3982,
+      "bytes": 4562,
       "mode": "100644",
       "path": "verification/passages_source_closure.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "5cf947921a7309f7b72a39d8ec0d9e65fbe4ac4b896f95500bd52469ba04cb7d",
-      "source_blob": "29810ea073de35a76ca80ea1054899f44f7a459e"
+      "sha256": "9644b10c39a0bb62c10136293d5da8aa98165dcad74275b657de8b8ccabdb813",
+      "source_blob": "6dc0ebbe775e65d5bad6c0351bccae9d3a4e2ae7"
     },
     {
-      "bytes": 24464,
+      "bytes": 24998,
       "mode": "100644",
       "path": "verification/statement_identity.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "e6a6cf81d7f8b3321b8cf402ad2f57b6272506889944cb04a56cdf4796241180",
-      "source_blob": "91dc03416a9651aca20513661a01d98a1d2dc4fc"
+      "sha256": "30eaed332605eab5a9024ee1e81605642d679edcbffa0e82f5918750d648e6fe",
+      "source_blob": "c2aa2e357506dc5a67c06187d1b539a62512cee1"
     },
     {
-      "bytes": 14821,
+      "bytes": 15381,
       "mode": "100644",
       "path": "verification/trust_manifest.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "4ff07ba94e6a022af12c9e91c56f35d2133032a9f5a36900480f49d405d08f0c",
-      "source_blob": "c5b65998bd21b64f3040485c5d9d94c2e8f10247"
+      "sha256": "f147dbb588ed3dfc9c23e838562a20f66cbb6e53ebca6aac720052c6d4893b72",
+      "source_blob": "372c76bcb1a977a9e3d80ea1a99527dd8d6528a5"
     },
     {
       "bytes": 561,
@@ -592,7 +592,7 @@
   "paper_registry_sha256": "5f4582b32c009ec3446aa55f3f34974dd7d2e33ac56c44a346ebf6971cdd4f8c",
   "release_output_policy": "legacy-unspecified",
   "repository": "clebsch-passages",
-  "repository_map_sha256": "cefc87eca06986ec4a613c1b6ff3652e099c8779cfb9dcba178d81bac91ce8dd",
+  "repository_map_sha256": "1bdb09c56a03b75d686d0267263cefe6b18befe52a3bbbc522bbc9b68b74c8ba",
   "schema_version": 1,
-  "source_commit": "97cf112aeb809ca011e02a8f33ca8a184a2ce613"
+  "source_commit": "656087c6d9485d7fda773943b5b71e980a1a003c"
 }
