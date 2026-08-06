@@ -132,25 +132,35 @@
       "supplemental_declarations": [
         "RelativeConicArcs.ClebschMiddleExterior.middleExterior_diagonal",
         "RelativeConicArcs.ClebschOperatorShadows.matchingEvaluation_conferenceMatrix_eq_triangleCubic",
-        "RelativeConicArcs.ClebschOperatorShadows.pfaffianSix_conferenceBracket_eq_four_triangleCubic"
+        "RelativeConicArcs.ClebschOperatorShadows.pfaffianSix_conferenceBracket_eq_four_triangleCubic",
+        "RelativeConicArcs.GoldenCommutatorDeterminant.det_eq_pfaffianSix_sq",
+        "RelativeConicArcs.GoldenCommutatorDeterminant.det_conferenceBracket_eq_sixteen_triangleCubic_sq"
       ],
-      "excluded": "coherence of the outer six-family, the determinant-square identity, and the cross-golden determinant comparison remain human proofs"
+      "excluded": "coherence of the outer six-family and the cross-golden determinant comparison remain human proofs.  The determinant-square identity is checked: the determinant of an order-six skew-symmetric matrix with vanishing diagonal is the square of its Pfaffian, so the determinant of the fixed conference bracket matrix is sixteen times the square of its triangle cubic."
     },
     "OPER-2": {
       "coverage": "partial mechanism; no full row claim",
       "declarations": [
         "RelativeConicArcs.ClebschGoldenConference.triangleCubic_switch"
       ],
-      "excluded": "outer matching-frame identification, Joubert and Segre equations, diagonal Clebsch section, and Segre--Igusa polar map"
+      "excluded": "outer matching-frame identification, the identification of the six signed translates with the classical Joubert coordinates, the diagonal Clebsch section, and the Segre--Igusa polar map.  The two Segre equations themselves are checked: the six signed translates of the triangle cubic sum to zero and their cubes sum to zero, identically in the coordinates and over every commutative ring.",
+      "supplemental_gate": "RelativeConicArcs.Gates.ClebschGoldenReturn",
+      "supplemental_declarations": [
+        "RelativeConicArcs.ClebschOuterSegreRelations.sum_outerCubic",
+        "RelativeConicArcs.ClebschOuterSegreRelations.sum_outerCubic_cube"
+      ]
     },
     "OPER-3": {
       "coverage": "partial mechanism; no full row claim",
       "declarations": [],
       "supplemental_gate": "RelativeConicArcs.Gates.ClebschGoldenReturn",
       "supplemental_declarations": [
-        "RelativeConicArcs.ConferenceCutSpectrum.signedTriangle_sq"
+        "RelativeConicArcs.ConferenceCutSpectrum.signedTriangle_sq",
+        "RelativeConicArcs.ConferenceCutBlocks.mul_transpose_eq_of_sq_smul",
+        "RelativeConicArcs.ConferenceCutBlocks.trace_mul_self",
+        "RelativeConicArcs.ConferenceCutBlocks.fourSetWeight_eq_three_or_neg_one"
       ],
-      "excluded": "the general cross-block spectrum formula, closed-walk count, inclusion-rank descent, higher-order Ramsey exclusion, and classical aligned-design consequences remain human arguments"
+      "excluded": "the general cross-block spectrum formula as a statement about eigenvalues, the closed-walk organization of the fourth trace, the inclusion-rank descent, the higher-order Ramsey exclusion, and the classical aligned-design consequences remain human arguments.  The polynomial core is checked: for a cut of arbitrary size of a matrix squaring to a scalar the cross block satisfies B * Bᵀ = q • 1 - A * A on the chosen subset, the trace of the square of a zero-diagonal sign matrix is the number of ordered pairs of distinct indices, and the three signed Hamilton-cycle products of any four-set sum to 3 or to -1, so a four-set is aligned or carries weight -1 with nothing in between."
     },
     "OPER-4": {
       "coverage": "partial mechanism; no full row claim",

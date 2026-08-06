@@ -111,11 +111,26 @@ The replay program never starts Lean or Lake itself.
 The operator consolidation uses the expanded golden-return theorem package as
 a second pinned formal map.  It covers the conference, triangle, two-graph,
 middle-exterior, support-recovery, golden-descent, fixed-conference
-commutator-Pfaffian, and order-six signed-triangle mechanisms.  The general
-inclusion/Ramsey exchange-rigidity proof, the classical inputs to the
+commutator-Pfaffian, order-six skew determinant-square, outer Segre-relation,
+cut-block, and order-six signed-triangle mechanisms.  The determinant square is proved for every
+order-six skew-symmetric matrix with vanishing diagonal over a commutative
+ring, and specialized to the fixed conference bracket matrix, whose
+determinant is sixteen times the square of its triangle cubic.  The six
+signed translates of the triangle cubic under the reorderings fixing the first
+three labels are checked to satisfy both equations of the Segre cubic
+threefold: they sum to zero and their cubes sum to zero, identically in the
+coordinates and over every commutative ring.  For a cut of arbitrary size of a
+matrix squaring to a scalar, the cross block satisfies `B * Bᵀ = q • 1 - A * A`
+on the chosen subset, the trace of the square of a zero-diagonal sign matrix is
+the number of ordered pairs of distinct indices, and the three signed
+Hamilton-cycle products of any four-set sum to `3` or to `-1`.  No eigenvalue
+or singular-value statement is formalized.  The closed-walk organization of the fourth
+trace, the inclusion-rank descent and Ramsey exclusion behind
+exchange rigidity, the classical inputs to the
 aligned-design faithfulness argument, outer-family coherence, the cross-golden
-determinant comparison, and the classical Joubert--Segre--Igusa
-identifications remain human proof boundaries.
+determinant comparison, the identification of the six translates with the
+classical Joubert coordinates, and the Segre--Igusa polar map remain human
+proof boundaries.
 It is replayed against a checkout of the formal artifact with
 
 ```text
@@ -127,7 +142,7 @@ python3 verification/verify_golden_return_lean.py \
 gate, declarations, and exact exclusions.  `golden_return_axioms.txt` records
 the complete pinned `#print axioms` output; replay rejects any change to that
 report.  This supplemental gate
-contributes partial mechanism coverage to `OPER-1`, `OPER-3`, and `OPER-4`; no manuscript theorem
+contributes partial mechanism coverage to `OPER-1`, `OPER-2`, `OPER-3`, and `OPER-4`; no manuscript theorem
 takes Lean as a proof dependency.
 `golden_return_source_closure.json` pins the exact project-local transitive
 import closure.  A guarded gate log is checked by replacing `--source-only`
