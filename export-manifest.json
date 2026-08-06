@@ -13,13 +13,13 @@
       "source_blob": null
     },
     {
-      "bytes": 1533,
+      "bytes": 1805,
       "mode": "100644",
       "path": ".zenodo.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "0f7fdb630e8a2d17cd9c38f54cf4c4619bc5b2e56b4c3bc8d6448359b3e9f511",
-      "source_blob": "b76c578bb99e8958e181245207f9c29a4ccafd06"
+      "sha256": "017877a7836fd9daf0af341c4284fde6e8a15ca0eed8eb3f4840870fd5659a9f",
+      "source_blob": "e54d42ddd6ac7ed20bf03f4b9c5d6948a7334960"
     },
     {
       "bytes": 2963,
@@ -31,13 +31,13 @@
       "source_blob": "c8edc87d9ed461b08599cbcfd60c90a366ddb953"
     },
     {
-      "bytes": 688,
+      "bytes": 690,
       "mode": "100644",
       "path": "FORMAL_COMPANION.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "f3dd9f7c97ce8a37164d3920b9e76fa3f8e8c27c1f9279cacb69d05863853987",
-      "source_blob": "5e8b129eeb01d4c6fcda5226d81a06f0f8e204f6"
+      "sha256": "f1a0ab42bdb051d968a0ef88c03e9e5d2401c2141b7e96b90e6b5b64d3071643",
+      "source_blob": "3586e1eee5ed2c581561f8f3d8072a28cf0c93f6"
     },
     {
       "bytes": 470,
@@ -75,7 +75,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "07b1451866a7a8f4c52e02a0c67bca96f224821ae94b433975d20520d05a26fa",
+      "sha256": "7b69619f41b37571ce89203bb97c53a465fb728397b1b3cca568ac78436ab30f",
       "source_blob": null
     },
     {
@@ -88,22 +88,22 @@
       "source_blob": "479cf4de4a4d834c578a894409878c8106c60835"
     },
     {
-      "bytes": 217298,
+      "bytes": 217369,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "780e6235fa8dcc53e31901682200664b5e97d2bf00846fa167c0ea1aa5157995",
-      "source_blob": "66800adc04a40ee998913bdeead1a00318556580"
+      "sha256": "3f86147a982bc1c3fa6c185d635d9951ef918efc38a8b5cb37c7a87967c69c46",
+      "source_blob": "fbf8bdfc38d376afe5d03d25560bc09f422029ff"
     },
     {
-      "bytes": 4788,
+      "bytes": 4725,
       "mode": "100644",
       "path": "clebsch_passages.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "1a8e205be4dfaf368c9fcc4910da791018cd57cc2d2fa9bce0bc7be922638da7",
-      "source_blob": "239134d822c2a2a02086772b3cefa2d77d1bdd84"
+      "sha256": "d601e4281f6fedb9b9c105650ea80bfa74071fea65ac8e23b149a15f7228b331",
+      "source_blob": "a220fb97c158a89c22ff641d3e7c16fd4dd11de9"
     },
     {
       "bytes": 567,
@@ -248,13 +248,13 @@
       "source_blob": "d9b06f9165e57f2a713639d158bb57dac53269a0"
     },
     {
-      "bytes": 4861,
+      "bytes": 4864,
       "mode": "100644",
       "path": "verification/check_manuscript_build.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "4c75313b7714b00a87ebdb8e4ddf8d7731abcaefe46eecb55ab3cae85fc5d731",
-      "source_blob": "47f8b5dd6971292d624a073469f94b994e8374f7"
+      "sha256": "060542fc92a0e5bba2304946831d5a1b2e1019b1c3348f258d1718b73ce11600",
+      "source_blob": "e23e34ab478f2b843f9adaadc96c2fca8a737239"
     },
     {
       "bytes": 1151,
@@ -589,10 +589,10 @@
   "paper_ids": [
     "clebsch_passages"
   ],
-  "paper_registry_sha256": "5f4582b32c009ec3446aa55f3f34974dd7d2e33ac56c44a346ebf6971cdd4f8c",
+  "paper_registry_sha256": "603ca0770496b2e4fcbdb4cf5db5126a70f5ed52d5f7e1789d70e3fb83c0f21d",
   "release_output_policy": "legacy-unspecified",
   "repository": "clebsch-passages",
-  "repository_map_sha256": "1bdb09c56a03b75d686d0267263cefe6b18befe52a3bbbc522bbc9b68b74c8ba",
+  "repository_map_sha256": "59230e8d90cbd3a647c7577061816d50d5f3d2fa9ffa1a21e9d6da3c5251fba9",
   "schema_version": 1,
-  "source_commit": "deebf928d75ee53e4dd21c6b2779c077b9d7c42c"
+  "source_commit": "58729c97aa3f22c297abee63749dc3da0501c279"
 }
