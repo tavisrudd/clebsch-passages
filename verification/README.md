@@ -123,14 +123,47 @@ coordinates and over every commutative ring.  For a cut of arbitrary size of a
 matrix squaring to a scalar, the cross block satisfies `B * Bᵀ = q • 1 - A * A`
 on the chosen subset, the trace of the square of a zero-diagonal sign matrix is
 the number of ordered pairs of distinct indices, and the three signed
-Hamilton-cycle products of any four-set sum to `3` or to `-1`.  No eigenvalue
-or singular-value statement is formalized.  The closed-walk organization of the fourth
-trace, the inclusion-rank descent and Ramsey exclusion behind
-exchange rigidity, the classical inputs to the
-aligned-design faithfulness argument, outer-family coherence, the cross-golden
-determinant comparison, the identification of the six translates with the
-classical Joubert coordinates, and the Segre--Igusa polar map remain human
-proof boundaries.
+Hamilton-cycle products of any four-set sum to `3` or to `-1`.  The fourth
+trace is sorted by the support of the closed four-walks it counts: it is
+`d(d-1) + 12*C(d,3)` plus the four-set weights, each of which is `24` or `-8`,
+eight times `3` or `-1`; and equal four-subset weight sums over all balanced
+halves of a `2d`-element label set with `4 <= d` force that weight to be
+constant on four-sets, by one-element swap descent on inclusion sums.  The
+exchange operator of a balanced cut has the characteristic polynomial and every
+power trace of `1 - q^-1 A^2`, its first two moments are `d^2/q` and
+`(d q^2 - 2 q d(d-1) + d(d-1) + 12*C(d,3) - 8*C(d,4) + 32 c)/q^2` for `c` the
+number of aligned four-sets of the half, and at order six the polynomial is
+`(X - 1/5)(X - 4/5)^2` whatever the cut.  Over the real numbers those
+statements are unconditional: both spectral isometries are proved to exist, and
+the characteristic polynomial of `1 - q^-1 A^2` is the product of
+`X - (1 - a_i^2/q)` over the eigenvalues `a_i` of the principal block, which is
+the eigenvalue reading of the spectrum.  A subset `Y` of a single label set is
+turned into cut coordinates by relabelling along `Equiv.sumCompl`, under which
+the principal block is the submatrix on `Y`, its fourth trace is the fourfold
+sum over `Y`, and its aligned four-sets are the aligned four-subsets of `Y`;
+hence no real number is the second exchange moment of every balanced half of a
+symmetric conference matrix of order `2d` with `4 <= d`, while at order six the
+polynomial is `(X - 1/5)(X - 4/5)^2` for every three-element subset.
+Two qualifications belong with the exchange material.  The clause `4 <= d` is
+what the swap descent needs, namely `4 + d <= 2d`; whether a matrix satisfying
+the hypotheses exists at a given order is a separate question the formal
+artifact does not address, so at any one order the content of that clause is
+conditional on such a matrix existing there.  And the failure of independence is
+formalized at the level of the second moment, hence of the characteristic
+polynomial and of the eigenvalues with multiplicity; no separate statement about
+the spectrum read as a set is proved.
+
+The Ramsey exclusion
+behind exchange rigidity, the classical inputs to the aligned-design
+faithfulness argument, outer-family coherence, the cross-golden determinant
+comparison, the identification of the six translates with the classical Joubert
+coordinates, and the Segre--Igusa polar map remain human proof boundaries.  The
+first of those is a boundary of the manuscript's *printed proof*, not a gap in
+the formal conclusion: the Lean closes the same rigidity statement by the swap
+descent and the whole-matrix fourth-trace pin, without the switching
+normalization or the Ramsey bound.  Until the manuscript is edited to print that
+route, the formal artifact certifies the theorem rather than the argument beside
+it.
 It is replayed against a checkout of the formal artifact with
 
 ```text

@@ -1,26 +1,61 @@
 {
   "external_imports": [
     "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Powerset",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.CharZero.Defs",
+    "Mathlib.Analysis.Matrix.Spectrum",
     "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Data.Finset.Powerset",
     "Mathlib.Data.Fintype.Card",
     "Mathlib.Data.Matrix.Basic",
     "Mathlib.Data.Matrix.Block",
+    "Mathlib.Data.Matrix.ColumnRowPartitioned",
     "Mathlib.Data.Matrix.Mul",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.LinearAlgebra.Matrix.Charpoly.Basic",
+    "Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff",
     "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
     "Mathlib.LinearAlgebra.Matrix.Notation",
     "Mathlib.LinearAlgebra.Matrix.Trace",
     "Mathlib.Tactic.FinCases",
     "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.Module",
+    "Mathlib.Tactic.NoncommRing",
     "Mathlib.Tactic.NormNum",
     "Mathlib.Tactic.NormNum.NatFactorial",
     "Mathlib.Tactic.Ring"
   ],
-  "module_count": 20,
+  "module_count": 29,
   "roots": [
     "RelativeConicArcs.Gates.ClebschGoldenReturn"
   ],
   "schema_version": 1,
   "sources": [
+    {
+      "bytes": 20771,
+      "module": "RelativeConicArcs.BalancedExchangeEigenvalues",
+      "path": "RelativeConicArcs/BalancedExchangeEigenvalues.lean",
+      "sha256": "e706956f6fe119f5183cf8f301ba81bcfebc8cebe9448756f60eb6ce12eb50fb"
+    },
+    {
+      "bytes": 20106,
+      "module": "RelativeConicArcs.BalancedExchangeHalfCut",
+      "path": "RelativeConicArcs/BalancedExchangeHalfCut.lean",
+      "sha256": "ebf26a108827caaa57889f8fc3517482f6eee2c774fa00cf8043100510152d88"
+    },
+    {
+      "bytes": 10350,
+      "module": "RelativeConicArcs.BalancedExchangeRigidity",
+      "path": "RelativeConicArcs/BalancedExchangeRigidity.lean",
+      "sha256": "abb5e89dec25346811e6b4d7e19b3a4a41ae9121e51e0db198eb717f0a62ea8c"
+    },
+    {
+      "bytes": 60908,
+      "module": "RelativeConicArcs.BalancedExchangeSpectrum",
+      "path": "RelativeConicArcs/BalancedExchangeSpectrum.lean",
+      "sha256": "f03bec34fa78f70a4fab689876a18dcaf6accaf42574364541d3b97cd15668b6"
+    },
     {
       "bytes": 17856,
       "module": "RelativeConicArcs.ClebschGoldenConference",
@@ -88,6 +123,18 @@
       "sha256": "5dcf33b398d8f069fd039bd2d17956e1ed81c5819e5753d00a6faba44a5bddf7"
     },
     {
+      "bytes": 13320,
+      "module": "RelativeConicArcs.ClebschOuterJoubertFrame",
+      "path": "RelativeConicArcs/ClebschOuterJoubertFrame.lean",
+      "sha256": "4b99f27474449d898d5f3fc4f7929e89ce738f45fe85d20d5aea1dfcb48a0371"
+    },
+    {
+      "bytes": 16946,
+      "module": "RelativeConicArcs.ClebschOuterMatchingFrame",
+      "path": "RelativeConicArcs/ClebschOuterMatchingFrame.lean",
+      "sha256": "8f8ab30a6f9b243705e45cfa2a03bb6d80fec2486690dc67bb4922b30c8f8b0f"
+    },
+    {
       "bytes": 3388,
       "module": "RelativeConicArcs.ClebschOuterSegreRelations",
       "path": "RelativeConicArcs/ClebschOuterSegreRelations.lean",
@@ -100,10 +147,10 @@
       "sha256": "f17562813c992c291f02e28231aab66c654e89826292fd55071818f0edcf2089"
     },
     {
-      "bytes": 6735,
+      "bytes": 28470,
       "module": "RelativeConicArcs.ConferenceCutBlocks",
       "path": "RelativeConicArcs/ConferenceCutBlocks.lean",
-      "sha256": "593e2cee94ec992246eb997d8bd3ce9c6a856335bc7238a2aba7bba657ab86d7"
+      "sha256": "110983279868018fa0ecfa6c691372585de1b5b762271014bfba73f412219176"
     },
     {
       "bytes": 1716,
@@ -112,10 +159,16 @@
       "sha256": "681314297d88c806e640f6f8796f4d1d1a34b47178159d5cdabc53d52f68ac97"
     },
     {
-      "bytes": 8183,
+      "bytes": 12918,
+      "module": "RelativeConicArcs.CrossGoldenDeterminant",
+      "path": "RelativeConicArcs/CrossGoldenDeterminant.lean",
+      "sha256": "4e7bef3228f45d4561db0291ec66a3dd33be5288dd941223b2afbd3e73b370fc"
+    },
+    {
+      "bytes": 24623,
       "module": "RelativeConicArcs.Gates.ClebschGoldenReturn",
       "path": "RelativeConicArcs/Gates/ClebschGoldenReturn.lean",
-      "sha256": "d2a9f2a8f21b35786dd35cc4d68dda89eebee5c3658f12c190a286a8ebbd27b9"
+      "sha256": "9e05b80be0190d8749ef527c0848721f965187a18e19f741fac19f82d12e81d6"
     },
     {
       "bytes": 5731,
@@ -134,6 +187,18 @@
       "module": "RelativeConicArcs.GoldenMatchingCubics",
       "path": "RelativeConicArcs/GoldenMatchingCubics.lean",
       "sha256": "e16a8e173049bc21afd615ecf23b3da176ce5cd1bd3b217c1872c1ec67b291a5"
+    },
+    {
+      "bytes": 14927,
+      "module": "RelativeConicArcs.SegreIgusaPolar",
+      "path": "RelativeConicArcs/SegreIgusaPolar.lean",
+      "sha256": "49dc03581994aa2472673d38f9045e8b09014b0b3f5514a21184ea24f13a964e"
+    },
+    {
+      "bytes": 13357,
+      "module": "RelativeConicArcs.SubsetInclusionSums",
+      "path": "RelativeConicArcs/SubsetInclusionSums.lean",
+      "sha256": "f32f3d349c5e54a4aa2f9e0b241a7d6db96cda49e470d17920694ba900f61ce8"
     },
     {
       "bytes": 4119,
