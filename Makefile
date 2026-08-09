@@ -10,11 +10,15 @@ export FORCE_SOURCE_DATE = 1
 LATEXMK ?= nix develop .\#manuscript --command latexmk
 LATEXMK_FLAGS ?= -xelatex -interaction=nonstopmode -halt-on-error
 
-.PHONY: all clean
+.PHONY: all lint clean
 
-all: clebsch_passages.pdf
+all: lint clebsch_passages.pdf
+
+lint:
+	python3 verification/lint_tex_spacing.py clebsch_passages.tex sections
 
 clebsch_passages.pdf: clebsch_passages.tex sections/*.tex
+	python3 verification/lint_tex_spacing.py clebsch_passages.tex sections
 	$(LATEXMK) $(LATEXMK_FLAGS) clebsch_passages.tex
 
 clean:
