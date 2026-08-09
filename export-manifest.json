@@ -62,7 +62,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "29c21c1913dd02cef49b99a514d547060e1e9b88d14c1cfcfe491166d8ee751a",
+      "sha256": "4fdb52b8655171f6eae7b699ccc7a6d135c85b25c58b3fc7d6880be5e73b14a5",
       "source_blob": null
     },
     {
@@ -75,13 +75,13 @@
       "source_blob": "739f06711b24af16846816964c1764ddec588ade"
     },
     {
-      "bytes": 234740,
+      "bytes": 235682,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "0ee06115a2817e8bdd4c1ff1618e4f5b935f9a21e5d045b481d424e2254b3fb8",
-      "source_blob": "dccab643db066f7fefb29538be8d2a24323d8369"
+      "sha256": "db0536d19e96decc20359783df227b94d6f1190807d12b6cd9c680c8831b9388",
+      "source_blob": "3f7efe7c5b39346ed56f2cdad45e88751f94bd52"
     },
     {
       "bytes": 4089,
@@ -138,13 +138,13 @@
       "source_blob": "4d98b5575cb8fac22e7ac52c86223fbeacf87e48"
     },
     {
-      "bytes": 19309,
+      "bytes": 19987,
       "mode": "100644",
       "path": "sections/02-orientation-cover.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "55f2aea5858d0dd1571e393707c4110a35246dcd30093eba2abca643ea7e9ee1",
-      "source_blob": "c457224e0e017a7d34a4814f58f7c879a0be19a7"
+      "sha256": "1d96c3287adec03e733fd85df6238fcbee803fdd21ad555e1a63037dc9815d28",
+      "source_blob": "ac12dfe083377527ab4af8454f3902a75dabe221"
     },
     {
       "bytes": 6143,
@@ -215,8 +215,8 @@
       "path": "sections/10-references.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "467115d7514f6ef0c4c0b20432824d135c1f3e4fc3a0f1804bc5ff36ea45364b",
-      "source_blob": "9ed99fa5389891f3e5bbca656b32be07cc50df4c"
+      "sha256": "b676aff8b96e1e97d7c747259b2df1e6c17cad62a879a882773e6aeee509da83",
+      "source_blob": "54e059f96d18cfae98e50b0d9fdbb0249d6e4b05"
     },
     {
       "bytes": 11393,
@@ -510,8 +510,8 @@
       "path": "verification/statement_identity.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "9c666cf2cc9eca2aa80f204bfdbeab0fecc036c64800e7c3ec06f96286c4a72d",
-      "source_blob": "7d07cc02ed2b3066c12df2603316b31bed65ada7"
+      "sha256": "cdce020b2d80cc0017a3d84e502299a8e143dca1d5b3d58be07aae9e5b85b25b",
+      "source_blob": "2585242d4b92d7dd8c1bd38f8b90c6bae5bdadc3"
     },
     {
       "bytes": 18302,
@@ -590,5 +590,5 @@
   "repository": "clebsch-passages",
   "repository_map_sha256": "98abb280d382d281cf08623f05acffa071a53a792cda31e419791fba225e4102",
   "schema_version": 1,
-  "source_commit": "ee2fd0257ef4fba28ee06594b1c445bd381f124f"
+  "source_commit": "74a73b975debdb13a467c8830770929d7a4b1c6e"
 }
