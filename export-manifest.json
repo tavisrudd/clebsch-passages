@@ -62,7 +62,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "3a4241a28f22b6a4d2749cf570dd32ef2bf619fc3a032d12950866af7f14e3d7",
+      "sha256": "90c4f1c879bac8ac544c8fe5e306e598fa4bd7df041f288e02e0a148f35daa30",
       "source_blob": null
     },
     {
@@ -75,13 +75,13 @@
       "source_blob": "d287df2a01330575226093da0627f89dad5e69b3"
     },
     {
-      "bytes": 247490,
+      "bytes": 247433,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "2e4c619886035f392b34bf74d2f1bb1aabfb5c1b67548c4cd004812125d5d329",
-      "source_blob": "25946b9fea04d73ff898cfd7f0d56ca17b44d477"
+      "sha256": "3273e7b6b5cf800acdea93bc40ad73189d0c6c393216ff9a0da258a1e0666d87",
+      "source_blob": "99999468cf32a4f2892bfe65ede9bfefd0626cec"
     },
     {
       "bytes": 4173,
@@ -129,13 +129,13 @@
       "source_blob": "69708fa20078adce6b7a1cfe1937f71b9b023184"
     },
     {
-      "bytes": 15300,
+      "bytes": 15281,
       "mode": "100644",
       "path": "sections/01-introduction.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "960c782d95222694b1e368f6aef8d8ec441b51645b228cd252f0252d71e89cb1",
-      "source_blob": "be9eeb4c366d58834f7b70b5fcbaa12aa96293a1"
+      "sha256": "7c3f0d60068c1deb34e712d2707170e48527a24caa9ac11e207ca8722219feb2",
+      "source_blob": "55aedd44dd3ad60cc24ef791a6389956043c8da4"
     },
     {
       "bytes": 19987,
@@ -590,5 +590,5 @@
   "repository": "clebsch-passages",
   "repository_map_sha256": "3837472b201ebe328ee04be49f3a87f4e080d1ca771a5d95081a287017af611c",
   "schema_version": 1,
-  "source_commit": "f486c502906d73718de187145ea11789a8ce39e5"
+  "source_commit": "90f3d7b784ec6654e57111a69030990a53f3c18e"
 }
