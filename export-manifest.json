@@ -62,7 +62,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "6b92849188bd3938d35f71ee9ed1b9175350e042c220fbf30740d4e3ba59e53c",
+      "sha256": "aa2c92f54410796be3c75208155fd4ca64f21057165ef6088c0cf8207a5ccf06",
       "source_blob": null
     },
     {
@@ -75,13 +75,13 @@
       "source_blob": "d287df2a01330575226093da0627f89dad5e69b3"
     },
     {
-      "bytes": 243234,
+      "bytes": 243572,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "234046320443bffd0ccb97df239ecf61f80186110a10d83474474e212504e4a3",
-      "source_blob": "f8408d8dbaa858fc700c07fa2c6272eb1b84ee1c"
+      "sha256": "1040bd977ab74c77c0f77b69e21ad5f391ed13ba46911c6234e67056b69bb5f1",
+      "source_blob": "e423a3337bf80f34939178b85c47e082217c60de"
     },
     {
       "bytes": 4113,
@@ -156,13 +156,13 @@
       "source_blob": "ec4eef233f8798947ebd797224332303972d44b2"
     },
     {
-      "bytes": 5607,
+      "bytes": 5820,
       "mode": "100644",
       "path": "sections/04-arithmetic-specialization.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "815b609cc5354707dad08e015952ddcc5592e78c5a81347def79bbc5a89357a0",
-      "source_blob": "6023d06ee2bee502091f7cbb66d9a883bb85621b"
+      "sha256": "4ae82f831aafb77c2ac7e1114df559b2c711eae79e82363361e5576368f260f4",
+      "source_blob": "f6169e823a119e1534661ae48a0162b18f1bbfde"
     },
     {
       "bytes": 37496,
@@ -510,8 +510,8 @@
       "path": "verification/statement_identity.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "8b5de1d1d7bc7762b776bc3ff804b58e8b53ff05a7c356281f7260e92837ed3c",
-      "source_blob": "e65eee91fadad5b41dfa5f9621d2810e8c6e3f39"
+      "sha256": "649f63a5e7951df6909b52de82ad672bdbb370bb5eec4796f1a577281303d72b",
+      "source_blob": "a79e9f4ba7ec77ca75e69d298dc5a30fb6010dea"
     },
     {
       "bytes": 19565,
@@ -590,5 +590,5 @@
   "repository": "clebsch-passages",
   "repository_map_sha256": "b1287d69c4398954d5ac0d89e29bbd2425c5da957d3e7a6380f638513346803a",
   "schema_version": 1,
-  "source_commit": "3b8e2c11f91468a8f747cf651abe786d181a88dd"
+  "source_commit": "d4c535c8fab948091086c2eacb1bbe6144ca1e1f"
 }
