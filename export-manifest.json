@@ -62,7 +62,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "a384a2c2e6d62fddaaa3d4183b522d515b58c7851d479fd990d875f636d50e3b",
+      "sha256": "dbbb44e3357688c67f9323096010d917bfd5561af5951d3604f755d8d0c81635",
       "source_blob": null
     },
     {
@@ -75,13 +75,13 @@
       "source_blob": "d287df2a01330575226093da0627f89dad5e69b3"
     },
     {
-      "bytes": 249323,
+      "bytes": 249312,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "464cdced043dd24ca611150c8b3ad89b3d77479354d7d7409dc227fcd3e4cf42",
-      "source_blob": "f158b83fcb7031ac15177c54847299f2c8185444"
+      "sha256": "a61972bb4b06603a41946d47071ea00e1548af135b61006b49caca6bd56dc53f",
+      "source_blob": "efb5eaa391038e076737a9fc3b77125ab99ad6a2"
     },
     {
       "bytes": 3963,
@@ -219,13 +219,13 @@
       "source_blob": "d425d947dabf8f9a1dac5e63d994f37a00230082"
     },
     {
-      "bytes": 7245,
+      "bytes": 7234,
       "mode": "100644",
       "path": "sections/10-references.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "95ceac3c1c52084415bd8fa1db6f689a4d2f679f65fb57c8e3bec75dfe06e85d",
-      "source_blob": "6f0437d6435d7b0d40f39f73265572c075eedcea"
+      "sha256": "8c55a3c27e318db418b1acea1dc9cd308e682b22c3818641e827b656f1eedbf8",
+      "source_blob": "82c73fbe352c661daff2e20f49fdbf7ed4c41ed7"
     },
     {
       "bytes": 11392,
@@ -519,8 +519,8 @@
       "path": "verification/statement_identity.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "2ae85909dd8db321afa287c5ad649c37ecb438e189d038993391fc554ffed687",
-      "source_blob": "8d9c3460329f8886ddbb7458cc56fe10b4e9ddce"
+      "sha256": "69b3ee4b88b26e28fa9346a2e98128d95fe986157ddbfbc5953ba5820b4e08f8",
+      "source_blob": "3dd1b2af7c44253b1ace16fff600393ac5d128a2"
     },
     {
       "bytes": 19565,
@@ -599,5 +599,5 @@
   "repository": "clebsch-passages",
   "repository_map_sha256": "b1287d69c4398954d5ac0d89e29bbd2425c5da957d3e7a6380f638513346803a",
   "schema_version": 1,
-  "source_commit": "92486f29367ea9f86e95c5f5df8ad07e952593b1"
+  "source_commit": "13e393f59fff140df575b70814b51e9248550344"
 }
