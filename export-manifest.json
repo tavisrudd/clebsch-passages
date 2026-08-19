@@ -62,7 +62,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "dbbb44e3357688c67f9323096010d917bfd5561af5951d3604f755d8d0c81635",
+      "sha256": "fd0c10ed3313f6cb507d60215ad4c77e914ae1b1a05ebfc29f445944487487f9",
       "source_blob": null
     },
     {
@@ -75,13 +75,13 @@
       "source_blob": "d287df2a01330575226093da0627f89dad5e69b3"
     },
     {
-      "bytes": 249312,
+      "bytes": 249334,
       "mode": "100644",
       "path": "clebsch_passages.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "a61972bb4b06603a41946d47071ea00e1548af135b61006b49caca6bd56dc53f",
-      "source_blob": "efb5eaa391038e076737a9fc3b77125ab99ad6a2"
+      "sha256": "fcc478cbdf5c85ff830d5a7021eee8ecd5e5cc6977acfc14be6785b4c44979da",
+      "source_blob": "4715a709808513f0528ee0c207a45227c1631517"
     },
     {
       "bytes": 3963,
@@ -210,13 +210,13 @@
       "source_blob": "eb4add6d34aa1588e849e3c7e92421122ba95ee7"
     },
     {
-      "bytes": 2448,
+      "bytes": 2460,
       "mode": "100644",
       "path": "sections/09-programme-coda.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "1613187ce3ef3f1a3526a3cf9570173d67375ab1c7536c68fc4a27ec6643fba4",
-      "source_blob": "d425d947dabf8f9a1dac5e63d994f37a00230082"
+      "sha256": "1206d26f844fd17d717d18cfe0ef542a046fec9aebe2c5ed6f0d8bb8b63605f8",
+      "source_blob": "b9fd8af29d136ca1fe400764f525e2d22e606b91"
     },
     {
       "bytes": 7234,
@@ -519,8 +519,8 @@
       "path": "verification/statement_identity.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "69b3ee4b88b26e28fa9346a2e98128d95fe986157ddbfbc5953ba5820b4e08f8",
-      "source_blob": "3dd1b2af7c44253b1ace16fff600393ac5d128a2"
+      "sha256": "5a346bbef9813ad37bbed5762b06629c40fecdce928543b04e7d7152ec9a7e99",
+      "source_blob": "cf8a657ac09169746a1dfbaead25578d993c9fb3"
     },
     {
       "bytes": 19565,
@@ -599,5 +599,5 @@
   "repository": "clebsch-passages",
   "repository_map_sha256": "b1287d69c4398954d5ac0d89e29bbd2425c5da957d3e7a6380f638513346803a",
   "schema_version": 1,
-  "source_commit": "13e393f59fff140df575b70814b51e9248550344"
+  "source_commit": "9b9a2fe546a034d105facc8b26b00ff36e2fc8b5"
 }
