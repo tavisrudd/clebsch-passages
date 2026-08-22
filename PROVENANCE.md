@@ -1,6 +1,6 @@
 # Export provenance
 
-- Source snapshot commit: `91817b51a4689bce7c81f78d21441557d6e17550`
+- Source snapshot commit: `0c9eb45929e8571c34199247169a26f2f153a16d`
 - Repository identity: `tavisrudd/clebsch-passages`
 - Export method: deterministic, content-addressed source materialization.
 - File hashes and source blob identities are recorded in `export-manifest.json`.
