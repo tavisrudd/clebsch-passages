@@ -1,18 +1,18 @@
 {
   "schema": "clebsch-orientation-statement-identity-v3",
   "main_source": "clebsch_passages.tex",
-  "main_source_sha256": "861ffcc464b3d87990353544c1f75d5b50e6bc2837b9302814afedb5e7201ab7",
+  "main_source_sha256": "089c333f30e378c5438b5c087630a2711e641fa0604c120ae48c05c9a4442899",
   "section_sha256": {
-    "sections/01-introduction.tex": "186268882b261612e2e51518553371fd4095f414f39b682b98d9b8f7d9df26a8",
+    "sections/01-introduction.tex": "f17c4d12fdafa7b3600e22911f249ae4df0825d0decada4c8a638fa3a4e6ca08",
     "sections/02-orientation-cover.tex": "83f0383011b14c71538be61c30ea0e3e8b46ee8ed12c6a13b984de93d3c16b96",
-    "sections/03-marked-sheet-transport.tex": "9b9ba1c032c4a593d3447f96cf734247d704ab29b17433a758adc29661b084bd",
-    "sections/04-arithmetic-specialization.tex": "f7d9d022fdcd02ec9aefc7987675c30eef6a12512ca09797ddf7460ac0aa9a26",
-    "sections/05-conference-operator.tex": "4ae94027f90a980c43a2965caf946b81819830c9070a60d523ff63cefdcda916",
+    "sections/03-marked-sheet-transport.tex": "56a7f785af219c24b7d56a2b7519ff510135eafa6f273f0ba974a39f4d176ac7",
+    "sections/04-arithmetic-specialization.tex": "44fbe6fa563c147d9bed3b9713dae86237b77dfa668f6db8c15136a4e07a411e",
+    "sections/05-conference-operator.tex": "18604cbd791bc4de6f5c4f2af0ebd0e20989c5f30ad135197fa02f0d8225232a",
     "sections/05-harmonic-realization.tex": "ff31d4c161f152b306c07da6a70a5b355097dc9e777f90b4faacce555effc67b",
     "sections/09-conclusion.tex": "2387335535c272df273fa0a53617f8727a2c0bc84edb06f41c3cf759fe2fcd67",
     "sections/09-programme-coda.tex": "57c185951559e185994d92ee5e40906c5607c4f82db9896fc0f703c3fdb6a40b",
     "sections/07-marking-ambiguities.tex": "c3c61ac68747a3d5fe7f0f17e99940e219adee6691e2e323bf9c19bfb0396a79",
-    "sections/08-verification.tex": "d54e82c2166835ce658501b5c33c362048fb08be06c3eaf1f50750106f07be60",
+    "sections/08-verification.tex": "6d53a727f76bf8dcc13d74fe83f5a03aa5d9ba8e280600b5ba92adaf25f936cc",
     "sections/10-references.tex": "dbedb7c5dc41fbb3608c27d4e897a38ca8771fe1d1869a9b80cad8075c768ee4"
   },
   "statement_count": 11,
@@ -22,7 +22,7 @@
       "environment": "theorem",
       "title": "Arithmetic incidence cover",
       "source": "sections/01-introduction.tex",
-      "source_line": 112,
+      "source_line": 111,
       "sha256": "6d903edd8afda2dfcabeca11638ed302f19edfb75d50fbb001e36983d4eac34a",
       "tex": "\\begin{theorem}[Arithmetic incidence cover]\n\\label{thm:arithmetic-main}\nThe function field of Hitchin's incidence cover is\n\\[\n \\Q(\\mathbf P(H))\\bigl(\\sqrt{5J_0}\\bigr).\n\\]\nIf \\(\\mathcal N\\to\\mathbf P(H)\\) is its finite Stein normalization, then,\nafter normalizing the anti-invariant summand, its algebra is\n\\[\n \\mathcal O\\oplus\\mathcal O(-3),\\qquad z^2=5J_0.\n\\]\nFor the Clebsch chart\n\\(\\iota_t:\\mathbf P(V_{\\Q(\\sqrt5)})\\to\\mathbf P(H_{\\Q(\\sqrt5)})\\)\ndefined in Section~\\ref{sec:cover},\n\\[\n \\iota_t^*J_0=16\\sigma_3^2.\n\\]\nThe chart is not defined over \\(\\Q\\); Galois conjugation carries it to the\nchart of the conjugate icosahedron.  The fibre over the rational point\n\\([xyz]\\) is nevertheless a complete reduced fibre with residue algebra\n\\(\\Q(\\sqrt5)\\).\n\\end{theorem}"
     },
@@ -31,7 +31,7 @@
       "environment": "proposition",
       "title": "Marked comparison of the two sheets",
       "source": "sections/01-introduction.tex",
-      "source_line": 179,
+      "source_line": 178,
       "sha256": "36625d6aadc0fae3fb8fa46ee7f5531f7c51060f9dc22439f332582018da4fe4",
       "tex": "\\begin{proposition}[Marked comparison of the two sheets]\n\\label{thm:marked-sheet-comparison}\nFix a marking datum \\(\\mathfrak m\\).  Let\n\\(B=\\mathbf P(V_E)\\), where \\(E=\\Q(\\sqrt5)\\), and pull Hitchin's\nincidence normalization back along \\(\\iota_t:B\\to\\mathbf P(H_E)\\).\nThe normalization of this pullback is a disjoint union\n\\[\n B_+\\amalg B_-.\n\\]\nThe fixed isotropic plane selects \\(B_+\\), and incidence deck exchange\ninterchanges the components.  For an odd generator normalized on \\(B_+\\),\ntheir equations are\n\\[\n z=4\\sqrt5\\,\\sigma_3,\n \\qquad z=-4\\sqrt5\\,\\sigma_3.\n\\]\nOn \\(D(\\sigma_3)\\) the pulled-back finite cover is split etale and has two\ndistinct compact incidence points.  Away from Hitchin's degree-ten\ndegeneracy locus (defined in Section~\\ref{sec:rational-incidence-model}),\nboth are regular\nicosahedral six-axis configurations; on that degeneracy locus with\n\\(\\sigma_3\\ne0\\), the fixed \\(U_t\\)-branch is regular and the other compact\nincidence point is degenerate.\nOn the Clebsch cubic the unnormalized branches meet, while the normalization\nremains disjoint.\n\nRelative to \\(\\mathfrak m\\), equip \\(B_+\\) with the marked conference pair\n\\(\\bigl(C_{\\mathfrak m},Z_{\\mathfrak m}\\bigr)\\) and equip \\(B_-\\) with its\ndeck-opposite pair.  At \\([xyz]\\), the configuration exchanger identifies this\nopposite with the Galois-conjugate configuration and\nthe representative\n\\((-C_{\\mathfrak m},-Z_{\\mathfrak m})\\).  Under the marked primitive\npair-sum map\n\\[\n \\beta:V\\longrightarrow\\Q^{\\binom52},\n \\qquad \\beta(y)_{ij}=y_i+y_j,\n\\]\nthe same relative convention fixes the sign of the degree-six cubic in\nTheorem~\\ref{thm:harmonic-main}.  The normalized component alone is not\nasserted to determine \\(\\mathfrak m\\).\n\\end{proposition}"
     },
@@ -67,7 +67,7 @@
       "environment": "theorem",
       "title": "Triangle--Pfaffian recognition",
       "source": "sections/05-conference-operator.tex",
-      "source_line": 313,
+      "source_line": 318,
       "sha256": "c9dcc8cc3a039d1b4ba23dd4a7cf944c102645b5ff48f94ae5bfa6c2ab428d7e",
       "tex": "\\begin{theorem}[Triangle--Pfaffian recognition]\n\\label{thm:triangle-pfaffian-recognition}\nLet \\(A=(a_{ij})\\) be real symmetric of even order \\(n\\geq4\\), with zero\ndiagonal and every off-diagonal entry nonzero.  Put\n\\[\n \\mathcal T_A(x)=\\sum_{|S|=3}\n \\left(\\prod_{\\{i,j\\}\\subset S}a_{ij}\\right)x_S,\n \\qquad\n \\Phi_A(x)=\\operatorname{Pf}[D_x,A],\n \\qquad x_S=\\prod_{i\\in S}x_i.\n\\]\nIf \\(\\Phi_A=\\mu\\mathcal T_A\\) for some \\(\\mu\\ne0\\), then \\(n=6\\) and\n\\(A^2=\\lambda I\\) for some \\(\\lambda>0\\).\n\nIf the off-diagonal entries also have a common absolute value, then, up to scale, switching,\nand relabelling, \\(A\\) is the pentagon conference matrix; conversely\n\\(\\Phi_A=\\pm4\\mathcal T_A\\); relative to an orientation of the signed label space,\nthe sign is that space's two-valued orientation character.\n\\end{theorem}"
     },
@@ -76,7 +76,7 @@
       "environment": "theorem",
       "title": "Rigidity at the conference representative",
       "source": "sections/05-conference-operator.tex",
-      "source_line": 397,
+      "source_line": 402,
       "sha256": "b75fc2b8fc3ee12332f9280842a3ec3ddce92d47db6cb84ef8fa561240321081",
       "tex": "\\begin{theorem}[Rigidity at the conference representative]\n\\label{thm:conference-equality-rigidity}\nThe twenty functions \\(F_S=h_S-4\\tau_S\\) have Jacobian of rank fourteen at\n\\(C\\), with kernel the scaling line \\(\\mathbf R\\,C\\).  Near \\(C\\) the locus\n\\(X_{+1}\\) is therefore exactly that line, and the same holds for\n\\(h_S+4\\tau_S\\) near every odd signed-permutation image of \\(C\\), the\nrepresentatives that reverse the orientation of the signed label space.\n\\end{theorem}"
     },
@@ -85,7 +85,7 @@
       "environment": "proposition",
       "title": "Nonsingular complementary minors",
       "source": "sections/05-conference-operator.tex",
-      "source_line": 542,
+      "source_line": 547,
       "sha256": "ea4f03b3317a8e558556eb24ef90af8b843312088a4bbdde20e842cb47a53335",
       "tex": "\\begin{proposition}[Nonsingular complementary minors]\n\\label{prop:nonsingular-complementary-minors}\nLet \\(A\\) be symmetric of order six with zero diagonal and every off-diagonal\nentry \\(\\pm1\\).  Then \\(A^2=5I\\) if and only if \\(\\det A[S^c,S]\\ne0\\) for every\n\\(3\\)-subset \\(S\\), and in that case every one of those twenty determinants is\n\\(\\pm4\\).\n\\end{proposition}"
     },
@@ -94,7 +94,7 @@
       "environment": "theorem",
       "title": "Balanced exchange rigidity",
       "source": "sections/05-conference-operator.tex",
-      "source_line": 636,
+      "source_line": 641,
       "sha256": "8db1d1d4a438052ec1bc1af41686716f8f2832b86900159762882f278b6dc5a5",
       "tex": "\\begin{theorem}[Balanced exchange rigidity]\n\\label{thm:balanced-exchange-rigidity}\nWith the notation above,\n\\[\n \\Spec(H_Y)=\\Spec\\!\\left(\\frac1qRR^{\\mathsf T}\\right)\n =\\left\\{1-\\frac{\\alpha_1^2}{q},\\ldots,\n          1-\\frac{\\alpha_d^2}{q}\\right\\},\n\\]\nwhere \\(\\alpha_1,\\ldots,\\alpha_d\\) are the eigenvalues of \\(A\\).  The\nspectrum is independent of the balanced half \\(Y\\) if and only if\n\\(d\\leq3\\).  Thus order six is the unique nontrivial realized symmetric\nconference order with this property, and its exchange spectrum is\n\\[\n \\left\\{\\frac15,\\frac45,\\frac45\\right\\}.\n\\]\n\nFor a four-set \\(K\\), let \\(w(K)\\) be the sum of its three signed\nHamilton-cycle products.  Call \\(K\\) \\emph{aligned} if \\(w(K)=3\\); in\nstandard two-graph terminology this is the union of the coherent and\nincoherent four-set types.  Let \\(c_Y\\) count the aligned four-sets in\n\\(Y\\).  Then\n\\[\n \\operatorname{tr}(H_Y)=\\frac{d^2}{q},\\qquad\n \\operatorname{tr}(H_Y^2)=\\frac{F_d+32c_Y}{q^2},\n\\]\nwhere\n\\[\n F_d=dq^2-2qd(d-1)+d(d-1)+12\\binom d3-8\\binom d4.\n\\]\nHence the first exchange moment is universal, whereas the second is\ncut-independent exactly in the stated small orders.\n\\end{theorem}"
     },
@@ -103,7 +103,7 @@
       "environment": "theorem",
       "title": "Aligned-design faithfulness",
       "source": "sections/05-conference-operator.tex",
-      "source_line": 792,
+      "source_line": 797,
       "sha256": "b4b9a9af3749dd555187abb79c792e6818326402612ab3428d4f4de881615da6",
       "tex": "\\begin{theorem}[Aligned-design faithfulness]\n\\label{thm:aligned-faithfulness}\nIf \\(|V|\\geq7\\), then \\(\\mathcal A(\\tau)\\) determines \\(\\tau\\) up to\ncomplement, and seven is the least bound with this property.\n\nFor a symmetric conference matrix of order \\(n\\geq10\\), its marked family of\nprincipal four-subsets with determinant \\(-3\\), which is the design of\nGreaves and Suda \\cite[Table~1 and Example~2.3]{GreavesSuda}, therefore\ndetermines its signing up to diagonal switching and global negation.  After\none aligned four-set \\(Q\\) is known, the\n\\[\n 1+4(n-4)+6\\binom{n-4}{2}=3n^2-23n+45\n\\]\ntests on four-sets meeting \\(Q\\) in at least two points suffice, and the\ndecoder in the proof uses exactly this many.  An aligned anchor is found\ndeterministically with at most twenty tests.  Each of those queries reads one\nbit, whether a single fourth-order principal minor equals \\(-3\\); the\nreconstruction consumes no minor value and no minor of any other order.\nOne calibrated triangle product selects between \\(C\\) and \\(-C\\).\n\\end{theorem}"
     },

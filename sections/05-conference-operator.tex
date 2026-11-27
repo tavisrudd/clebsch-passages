@@ -293,7 +293,12 @@ splitting,
  2\sqrt5\,B_T(x)&0
  \end{pmatrix}.
 \]
-Comparison with \(16Z_T^2\) gives
+The inherited forms trivialize
+\(\det(V_{T,-})\otimes\det(V_{T,+})^{-1}\) over \(E\) itself: since
+\(V_{T,+}\perp V_{T,-}\) in the standard form on \(E^6\),
+\(\operatorname{disc}V_{T,+}\cdot\operatorname{disc}V_{T,-}=1\) in
+\(E^\times/E^{\times2}\), so the induced form takes a square value on a
+generator.  Comparison with \(16Z_T^2\) gives
 \(Z_T^2=500\det(B_T)^2\); the chosen determinant-line orientation fixes the
 displayed sign.
 
@@ -414,7 +419,7 @@ a determinant with one entry from each row and column of the cross block.  So
 every partial derivative is the difference of two values of \(F_S\), at
 \(a_e=1\) and at \(a_e=0\), and is an exact integer.  Only twelve of the fifteen
 edges occur: for \(e=\{i,j\}\subset S=\{i,j,k\}\) one gets
-\(\partial F_S/\partial a_e=-4\varepsilon a_{ik}a_{jk}\); for \(e\) joining
+\(\partial F_S/\partial a_e=-4a_{ik}a_{jk}\); for \(e\) joining
 \(S\) to \(S^c\) the derivative is the corresponding signed \(2\times2\) cofactor
 of \(A[S^c,S]\); and for \(e\) inside \(S^c\) it vanishes.
 
@@ -533,7 +538,7 @@ character \((15,3,0,0,0)\) on the classes of orders \(1,2,3,5,5\); the only
 four-dimensional submodule is the irreducible \(\mathbf4\), so \(T\) is
 exactly \(\mathbf1\oplus\mathbf4\).  By
 Theorem~\ref{thm:conference-equality-rigidity} the Jacobian \(J\) is injective on
-\(\ker\mu\): the conference deformations the cubic equality kills are exactly
+\(\ker\mu\): the conference deformations annihilated by \(J\) are exactly
 the scalings.  This makes the conference count and the cubic count one
 statement about the four-dimensional constituent.
 
@@ -821,7 +826,7 @@ independent triple of \(G_r\).  The equality \(R(3,3)=6\) supplies an aligned
 anchor on every seven-set.
 
 It remains to prove faithfulness on seven points.  Fix an aligned
-\(Q=\{1,2,3,4\}\), complement one candidate if necessary, and switch graph
+\(Q=\{1,2,3,4\}\), complement either or both candidates if necessary, and switch graph
 representatives so that both vanish on \(Q\).  Switch each outside vertex
 once more so that its edge to vertex \(4\) is zero.  An outside point \(x\)
 then determines a uniquely normalized cut
